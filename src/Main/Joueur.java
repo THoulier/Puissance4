@@ -1,17 +1,18 @@
-public class Joueur
+public class Joueur {
     public String nom;
     public String forme;
 
-    public Joueur (String nom, String forme){
+    public Joueur(String nom, String forme) {
         this.nom = nom;
         this.forme = forme;
     }
 
-    public getNom(){
+    public String getNom() {
         return nom;
     }
 
-    public getForme(){
-        final char forme = this.forme;
+    public String getForme() {
+        final String forme = this.forme;
         return forme;
     }
+}
