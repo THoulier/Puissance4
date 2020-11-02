@@ -1,8 +1,8 @@
 public class Joueur
-    public string nom;
-    public string forme;
+    public String nom;
+    public String forme;
 
-    public Joueur (char nom, char forme){
+    public Joueur (String nom, String forme){
         this.nom = nom;
         this.forme = forme;
     }
