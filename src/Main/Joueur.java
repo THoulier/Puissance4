@@ -1,6 +1,6 @@
 public class Joueur
-    public char nom;
-    public char forme;
+    public string nom;
+    public string forme;
 
     public Joueur (char nom, char forme){
         this.nom = nom;
@@ -12,6 +12,6 @@ public class Joueur
     }
 
     public getForme(){
-        char forme = this.forme;
+        final char forme = this.forme;
         return forme
     }
