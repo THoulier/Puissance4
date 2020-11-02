@@ -8,10 +8,10 @@ public class Joueur
     }
 
     public getNom(){
-        return nom
+        return nom;
     }
 
     public getForme(){
         final char forme = this.forme;
-        return forme
+        return forme;
     }
