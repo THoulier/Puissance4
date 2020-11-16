@@ -11,12 +11,12 @@ public class Main{
             System.out.println("Entrez le nom du joueur" + i + " : ");
 
 
-            Scanner clavier = new Scanner(System.in);
-            String nom_Joueur = clavier.next();
+            Scanner kayboard = new Scanner(System.in);
+            String name_Player = keyboard.next();
 
-            Joueur joueur = new Joueur(nom_Joueur, "x");
+            Player player = new Player(nom_Joueur, "x");
 
-            System.out.println("Le nom du joueur"+ i + " est : " + joueur.nom + " et sa forme est :" + joueur.forme);
+            System.out.println("Le nom du joueur"+ i + " est : " + player.name + " et sa forme est :" + player.shape);
         }
     }
 
