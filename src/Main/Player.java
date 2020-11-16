@@ -1,8 +1,8 @@
-public class Player {
+public class Player extends Token{
     public String name;
     public int PlayerValue;
 
-    public Joueur(String nom, String forme) {
+    public Player(String name, String shape) {
         this.name = name;
         this.shape = shape;
     }
