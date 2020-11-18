@@ -1,3 +1,5 @@
+package Main;
+
 public class Player extends Token{
     public String name;
     public int PlayerValue;
