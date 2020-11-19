@@ -1,4 +1,4 @@
-
+package game;
 public class Grid extends Game{
     //Attributes
     private int nbcol;

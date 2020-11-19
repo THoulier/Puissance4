@@ -1,3 +1,4 @@
+package game;
 
 public class Player extends Game{
     public String name;

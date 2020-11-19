@@ -1,3 +1,6 @@
+package game;
+
+
 public class Ia extends Game{
     public String name;
     public int ia_value;
