@@ -7,8 +7,15 @@ import java.util.Scanner;
 public class UI extends Game{
 
     public static int get_user_entry(){
+
         Scanner keyboard = new Scanner(System.in);
-        return keyboard.nextInt();
+        int col =  keyboard.nextInt();
+
+        if (col>Grid.getNbcol() || col<1){
+            System.out.println("Column number must be between 1 and " + Grid.getNbcol());
+            return -1;
+        }
+        return col-1;
     }
 
     public static void interface_player(){

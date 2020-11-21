@@ -1,8 +1,9 @@
 package game;
 public class Grid extends Game{
+
     //Attributes
-    private int nbcol;
-    private int nbline;
+    private static int nbcol;
+    private static int nbline;
     private int [][] grid;
 
     //Constructor
@@ -17,36 +18,33 @@ public class Grid extends Game{
         }
     }
     //Get functions
-    public int getNbcol() { return nbcol; }
-    public int getNbline(){
+    public static int getNbcol() { return nbcol; }
+    public static int getNbline(){
         return nbline;
     }
-
+    public int [][] getGrid(){ return grid;}
 
 
 
     //Update grid
-    public void update_grid(int col, int tour){
-        if (col>nbcol || col<1){
-            System.out.println("Column number must be between 1 and " + nbcol);
+    public int update_grid(int col, int tour){
+
+        if (grid[0][col] != 0) {
+            System.out.println("Column number " + col + " is full");
+            return -1;
+        } else {
+            int cpt = nbline - 1;
+            while (grid[cpt][col] != 0 && cpt != -1) {
+                cpt--;
+            }
+            if (tour % 2 == 0) {
+                grid[cpt][col] = 1;
+            } else {
+                grid[cpt][col] = 2;
+            }
+            return cpt;
         }
 
-        else {
-            col = col-1;
-            if (grid[0][col] != 0) {
-                System.out.println("Column number " + col + " is full");
-            } else {
-                int cpt = nbline - 1;
-                while (grid[cpt][col] != 0 && cpt != -1) {
-                    cpt--;
-                }
-                if (tour % 2 == 0) {
-                    grid[cpt][col] = 1;
-                } else {
-                    grid[cpt][col] = 2;
-                }
-            }
-        }
     }
 
     //Display grid
