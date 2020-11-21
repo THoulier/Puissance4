@@ -8,10 +8,10 @@ public class Game{
 
     public static void main(String[] var0) {
 
-        UI.interface_player(); //Create two players
+        Player [] tab_players = UI.interface_player(); //Create two players
         Grid grid = new Grid(6,7); //Create the grid
 
-        GameManager.On_update(grid); //Update the grid
+        GameManager.On_update(grid, tab_players); //Update the grid
 
     }
 }

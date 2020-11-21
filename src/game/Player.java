@@ -1,8 +1,8 @@
 package game;
 
 public class Player extends Game{
-    public String name;
-    public int PlayerValue;
+    private String name;
+    private int PlayerValue;
 
     public Player(String name, int value) {
         this.name = name;
