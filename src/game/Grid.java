@@ -28,9 +28,9 @@ public class Grid extends Game{
 
     //Update grid
     public int update_grid(int col, int tour){
-
+        int c = col+1;
         if (grid[0][col] != 0) {
-            System.out.println("Column number " + col + " is full");
+            System.out.println("Column number " + c + " is full");
             return -1;
         } else {
             int cpt = nbline - 1;
