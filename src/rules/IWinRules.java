@@ -12,7 +12,6 @@ public class IWinRules extends GameManager{
             player_value = 2;
         }
 
-        System.out.println(Grid.getNbcol() +"et" + column);
         int align = 0; int max = 0;
 
         int col = column; int li = line;
@@ -41,7 +40,6 @@ public class IWinRules extends GameManager{
         while (li >= 0 && col < Grid.getNbcol() && grid[li][col] == player_value){ col ++; li --; align ++; }
         if (align > max){ max = align; }
 
-        System.out.println(max);
         if (max >= 4){
             return true;
         }

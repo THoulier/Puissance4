@@ -47,6 +47,15 @@ public class Grid extends Game{
 
     }
 
+    //Re initialize the grid
+
+    public void init_grid(){
+        for (int i = 0; i<nbline; i++){
+            for (int j = 0; j<nbcol; j++){
+                grid[i][j] = 0;
+            }
+        }
+    }
     //Display grid
     public void display(){
         System.out.println();
