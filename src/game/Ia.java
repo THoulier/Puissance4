@@ -1,13 +1,11 @@
 package game;
 
 
-public class Ia extends Game{
+public class Ia  extends Player{
     public String name;
-    public int ia_value;
 
     public Ia(String name, int value) {
-        this.name = name;
-        this.ia_value = value;
+        super(name,value);
     }
 
     public String getName() {

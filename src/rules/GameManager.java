@@ -3,7 +3,7 @@ package rules;
 import game.*;
 import user_interface.UI;
 
-public class GameManager extends Game{
+public class GameManager {
 
     public static void On_update(Grid grid, Player [] tab_players){
         int round = 1;

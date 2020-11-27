@@ -1,5 +1,5 @@
 package game;
-public class Grid extends Game{
+public class Grid {
 
     //Attributes
     private static int nbcol;

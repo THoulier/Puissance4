@@ -1,6 +1,6 @@
 package game;
 
-public class Player extends Game{
+public class Player {
     private String name;
     private int PlayerValue;
     private int win;

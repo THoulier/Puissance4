@@ -4,7 +4,7 @@ import game.*;
 
 import java.util.Scanner;
 
-public class UI extends Game{
+public class UI {
 
     public static int get_user_entry(){
 

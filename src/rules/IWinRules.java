@@ -2,7 +2,7 @@ package rules;
 
 import game.*;
 
-public class IWinRules extends GameManager{
+public class IWinRules {
 
     protected static boolean is_winning(int column, int line, int i, int [][] grid){
         int player_value = 0;
