@@ -8,6 +8,7 @@ public class Game{
 
     public static void main(String[] var0) {
 
+<<<<<<< HEAD
         Player [] tab_players = UI.interfacePlayer(); //Create two players
         Grid grid = new Grid(6,7); //Create the grid
 
@@ -16,6 +17,12 @@ public class Game{
             System.out.println("Score : "+ tab_players[1].getWin() +" - "+ tab_players[2].getWin());
             System.out.println("Round n° " + round);
             grid.display();
+=======
+        Player [] tabPlayers = UI.interfacePlayer(); //Create two players
+        Grid grid = new Grid(3,4); //Create the grid
+
+        GameManager.onUpdate(grid, tabPlayers); //Update the grid
+>>>>>>> 7f86f17b0120b6fda702f5fb09c7275e2ba00d81
 
             int col = 0; int line = 0;
             int tour = 0; int offset = 0;
