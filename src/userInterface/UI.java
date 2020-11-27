@@ -11,10 +11,6 @@ public class UI {
         Scanner keyboard = new Scanner(System.in);
         int col =  keyboard.nextInt();
 
-        if (col>Grid.getNbcol() || col<1){
-            System.out.println("Column number must be between 1 and " + Grid.getNbcol());
-            return -1;
-        }
         return col-1;
     }
 
