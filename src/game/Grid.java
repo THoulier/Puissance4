@@ -27,7 +27,7 @@ public class Grid {
 
 
     //Update grid
-    public int update_grid(int col, int tour){
+    public int updateGrid(int col, int tour){
         int c = col+1;
         if (grid[0][col] != 0) {
             System.out.println("Column number " + c + " is full");
@@ -49,7 +49,7 @@ public class Grid {
 
     //Re initialize the grid
 
-    public void init_grid(){
+    public void initGrid(){
         for (int i = 0; i<nbline; i++){
             for (int j = 0; j<nbcol; j++){
                 grid[i][j] = 0;
