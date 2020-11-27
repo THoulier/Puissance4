@@ -5,10 +5,10 @@ import userInterface.UI;
 
 public class GameManager {
 
-    public static void onUpdate(Grid grid, Player [] tab_players){
+    public static void onUpdate(Grid grid, Player [] tapPlayers){
         int round = 1;
-        while (tab_players[1].getWin() < 3 && tab_players[2].getWin() < 3) {
-            System.out.println("Score : "+ tab_players[1].getWin() +" - "+ tab_players[2].getWin());
+        while (tapPlayers[1].getWin() < 3 && tapPlayers[2].getWin() < 3) {
+            System.out.println("Score : "+ tapPlayers[1].getWin() +" - "+ tapPlayers[2].getWin());
             System.out.println("Round n° " + round);
             grid.display();
 
@@ -27,11 +27,11 @@ public class GameManager {
                         grid.display();
                         if (IWinRules.isWinning(col, line, tour, grid.getGrid()) == true) {
                             if (tour % 2 == 0) {
-                                System.out.println(tab_players[1].getName() + " won the round");
-                                tab_players[1].setWin(1);
+                                System.out.println(tapPlayers[1].getName() + " won the round");
+                                tapPlayers[1].setWin(1);
                             } else {
-                                System.out.println(tab_players[2].getName() + " won the round");
-                                tab_players[2].setWin(1);
+                                System.out.println(tapPlayers[2].getName() + " won the round");
+                                tapPlayers[2].setWin(1);
                             }
                             grid.initGrid();
                             break;
@@ -47,11 +47,11 @@ public class GameManager {
             }
             round ++;
         }
-        System.out.println("Final score is : "+tab_players[1].getWin() + " - " + tab_players[2].getWin());
-        if (tab_players[1].getWin() == 3) {
-            System.out.println("Player " + tab_players[1].getName() + " won the match");
+        System.out.println("Final score is : "+tapPlayers[1].getWin() + " - " + tapPlayers[2].getWin());
+        if (tapPlayers[1].getWin() == 3) {
+            System.out.println("Player " + tapPlayers[1].getName() + " won the match");
         } else {
-            System.out.println("Player " + tab_players[2].getName() + " won the match");
+            System.out.println("Player " + tapPlayers[2].getName() + " won the match");
         }
     }
 }
