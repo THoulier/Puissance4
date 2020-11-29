@@ -27,7 +27,20 @@ public class Game{
             while (tour < ((grid.getNbline() * grid.getNbcol()) + offset)) {
 
                 System.out.println("turn n° " + real_turn);
-                col = UI.getUserEntry(); //get column number
+                System.out.println(tab_players[1].getPlayerValue());
+                System.out.println(tab_players[2].getPlayerValue());
+
+                if (tab_players[1].getPlayerValue()==2  && tour%2==0) {
+                    System.out.println(tab_players[1].randomIa(grid));
+                    col = tab_players[1].randomIa(grid);
+                }
+                else if (tab_players[2].getPlayerValue()==2  && tour%2!=0){
+                    col = tab_players[1].randomIa(grid);
+                }
+                else {
+                    col = UI.getUserEntry(); //get column number
+                }
+
                 if (grid.colValidity(col) == true) {
                     line = grid.updateGrid(col, tour); //get line number
                     if (line != -1) {

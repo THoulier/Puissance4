@@ -2,21 +2,27 @@ package game;
 
 public class Player {
     private String name;
-    private int PlayerValue;
+    private int playerValue;
     private int win;
 
     public Player(String name, int value) {
         this.name = name;
-        this.PlayerValue = value;
+        this.playerValue = value;
         this.win = 0;
     }
+    int randomIa (Grid grid){
 
-    public String getName() {
+        int col = (int)(int)(Math.random() * ((grid.getNbcol() - 1) + 1)) + 1;
+        return col;
+    }
+
+    String getName() {
         return name;
     }
-    public int getWin() {
+    int getPlayerValue() { return playerValue; }
+    int getWin() {
         return win;
     }
-    public int setWin(int value) { win = win + value; return win; }
+    int setWin(int value) { win = win + value; return win; }
 
 }

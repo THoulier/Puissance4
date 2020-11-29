@@ -2,15 +2,16 @@ package game;
 
 
 public class Ia  extends Player{
-    public String name;
-
-    public Ia(String name, int value) {
-        super(name,value);
+    int iaType;
+    public Ia(String name, int value, int type) {
+        super(name, value);
+        this.iaType = type;
     }
 
-    public String getName() {
-        return name;
+    int randomIa (Grid grid){
+        int col = (int)(Math.random() * grid.getNbcol());
+        col ++;
+        return col;
     }
-
 
 }

@@ -49,7 +49,7 @@ public class UI {
                             tabPlayers[i] = new Player(playerName, 1);
                         }
                         if (playerType.equals("ia") == true) {
-                            tabPlayers[i] = new Player(playerName, 2);
+                            tabPlayers[i] = new Ia(playerName, 2, 1);
                         }
                     }else { end = false; }
                 }
