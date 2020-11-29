@@ -20,12 +20,13 @@ public class Game{
 
             int col = 0; int line = 0;
             int tour = 0; int offset = 0;
-
+            int real_turn = 1;
             if (round%2 == 0){ tour = 1; offset = 1; }
             else { tour = 0; offset = 0; }
 
             while (tour < ((grid.getNbline() * grid.getNbcol()) + offset)) {
-                System.out.println("turn n° " + tour);
+
+                System.out.println("turn n° " + real_turn);
                 col = UI.getUserEntry(); //get column number
                 if (grid.colValidity(col) == true) {
                     line = grid.updateGrid(col, tour); //get line number
@@ -48,6 +49,7 @@ public class Game{
                             break;
                         }
                         tour++;
+                        real_turn++;
                     }
                 }
             }

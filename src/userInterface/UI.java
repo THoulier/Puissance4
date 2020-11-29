@@ -7,9 +7,14 @@ import java.util.Scanner;
 public class UI {
 
     public static int getUserEntry(){
-
         Scanner keyboard = new Scanner(System.in);
-        int col =  keyboard.nextInt();
+        int col = 0;
+        try{
+            col =  keyboard.nextInt();
+        }
+        catch(Exception e){
+            System.out.println("You must enter an integer!");
+        }
 
         return col-1;
     }
@@ -17,22 +22,49 @@ public class UI {
     public static Player[] interfacePlayer() {
         Player [] tabPlayers = new Player[3];
         Scanner keyboard = new Scanner(System.in);
+        int i = 1;
 
-        for (int i = 1; i < 3; i++) {
+        while (i < 3){
+            boolean end=false;
             System.out.println("Joueur " + i + " ? : <human/ia> <name>");
-            String entree = keyboard.nextLine();
+            do
+            {
+                String entry = keyboard.nextLine();
+                String playerType = "";
+                String playerName = "";
 
-            String playerType = (entree + " ").split(" ")[0];
-            String playerName = (entree + " ").split(" ")[1];
+                if (entry.matches("^[a-zA-Z ]*$"))
+                {
+                    end = true;
+                    String [] tab_entry= entry.split(" ");
+                    playerType = tab_entry[0];
+                    playerName = tab_entry[1];
 
-            if (playerType.equals("human") == true) {
-                tabPlayers[i] = new Player(playerName, 1);
-            }
-            if (playerType.equals("ia") == true) {
-                tabPlayers[i] = new Player(playerName, 2);
-            }
-            System.out.println("Player " + i + " is " + playerName + " (" + playerType + ")");
+                    for (int k = 2; k<tab_entry.length; k++) {
+                        playerName = playerName +" "+ tab_entry[k];
+                    }
+
+                    if (playerType.equals("human") == true || playerType.equals("ia") == true) {
+                        if (playerType.equals("human") == true) {
+                            tabPlayers[i] = new Player(playerName, 1);
+                        }
+                        if (playerType.equals("ia") == true) {
+                            tabPlayers[i] = new Player(playerName, 2);
+                        }
+                    }else { end = false; }
+                }
+
+                if (end == false) {
+                    System.out.print("You must enter a player type followed by a player name\n");
+                } else {
+                    System.out.println("Player " + i + " is " + playerName + " (" + playerType + ")");
+                }
+            } while(!end);
+            i++;
         }
+
+
+
         return tabPlayers;
     }
 }
