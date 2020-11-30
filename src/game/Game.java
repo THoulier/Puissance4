@@ -3,11 +3,13 @@ package game;
 import java.util.Scanner;
 import userInterface.*;
 import rules.*;
+import java.io.File;
 
 public class Game{
 
     public static void main(String[] var0) {
-
+        File log = new File("log.txt");
+        log.delete();
         Player [] tab_players = UI.interfacePlayer(); //Create two players
         Grid grid = new Grid(6,7); //Create the grid
 
@@ -38,7 +40,7 @@ public class Game{
                     col = tab_players[1].randomIa(grid);
                 }
                 else {
-                    col = UI.getUserEntry(); //get column number
+                    col = UI.getUserEntry(tour); //get column number
                 }
 
                 if (grid.colValidity(col) == true) {
