@@ -1,6 +1,7 @@
 package game;
 
 import rules.*;
+import userInterface.FileWritter;
 
 public class Grid {
 
@@ -28,17 +29,23 @@ public class Grid {
     //int getCell(int i , int j){ return grid[i][j]; }
 
     //Col number validity
-    boolean colValidity(int col){
-        if (grid[0][col] != 0) {
-            System.out.println("Column number " + col + " is full");
-            return false;
-        }
+    boolean colValidity(int col, int playerNb){
+        String logText = "";
+
         col ++;
         if (col > nbcol || col<1){
             System.out.println("Column number must be between 1 and " + nbcol);
+            logText = "Error column no valid " + col + "\n";
+            FileWritter.fillInLog(logText);
             return false;
         }
-
+        col--;
+        if (grid[0][col] != 0) {
+            System.out.println("Column number " + col + " is full");
+            logText = "Error column full " + (col+1) + "\n";
+            FileWritter.fillInLog(logText);
+            return false;
+        }
         return true;
     }
 
