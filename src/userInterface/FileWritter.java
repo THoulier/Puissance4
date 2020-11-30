@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.FileWriter;
 
 public class FileWritter extends UI{
+
     public static void fillInLog(String text ){
         try {
             File logFile = new File("log.txt");
