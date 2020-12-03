@@ -35,7 +35,7 @@ public class Game{
                 System.out.println(tab_players[playerNb].getPlayerValue());
                 System.out.println("turn n° " + real_turn);
 
-                col = tab_players[playerNb].play(grid, tour); //player[playerNb] plays
+                col = tab_players[playerNb].play(grid); //player[playerNb] plays
 
 
                 if (grid.colValidity(col, playerNb) == true) {

@@ -8,7 +8,7 @@ public class Human extends Player{
         super(name, value, type);
     }
 
-    int play (Grid grid, int tour){
+    int play (Grid grid){
         int col = UI.getUserEntry();
         return col;
     }
