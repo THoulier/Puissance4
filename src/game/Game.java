@@ -14,11 +14,9 @@ public class Game{
         Grid grid = new Grid(6,7); //Create the grid
 
         int round = 1;
-        String logText = "";
 
         while (tab_players[1].getWin() < 3 && tab_players[2].getWin() < 3) {
-            logText = "Round begins\n";
-            FileWritter.fillInLog(logText);
+            writeLogText("Round begins\n");
 
             System.out.println("Score : "+ tab_players[1].getWin() +" - "+ tab_players[2].getWin());
             System.out.println("Round n° " + round);
@@ -45,28 +43,24 @@ public class Game{
 
                 if (grid.colValidity(col, playerNb) == true) {
 
-                    logText = "Player " + tab_players[playerNb].getNb()+" plays " + (col+1) +"\n";
-                    FileWritter.fillInLog(logText);
-
+                    writeLogText("Player " + tab_players[playerNb].getNb()+" plays " + (col+1) +"\n");
                     line = grid.updateGrid(col, tour); //get line number
+
                     if (line != -1) {
                         grid.display();
                         if (grid.isWinning(col, line, tour) == true) {
                             System.out.println(tab_players[playerNb].getName() + " won the round");
                             tab_players[1].setWin(1);
 
-                            logText = "Player "+ playerNb + " wins\n";
-                            FileWritter.fillInLog(logText);
-                            logText = "Score "+ tab_players[1].getWin() +" - "+ tab_players[2].getWin() + "\n";
-                            FileWritter.fillInLog(logText);
+                            writeLogText("Player "+ playerNb + " wins\n");
+                            writeLogText("Score "+ tab_players[1].getWin() +" - "+ tab_players[2].getWin() + "\n");
                             grid.initGrid();
                             break;
                         }
                         else if (grid.isWinning(col, line, tour) == false && tour == ((grid.getNbline() * grid.getNbcol()) + offset)-1){
                             System.out.println("Round ended in a draw, there is no winner");
                             grid.initGrid();
-                            logText = "Equality\n";
-                            FileWritter.fillInLog(logText);
+                            writeLogText("Equality\n");
                             break;
                         }
                         tour++;
@@ -82,8 +76,11 @@ public class Game{
         } else {
             System.out.println("Player " + tab_players[2].getName() + " won the match");
         }
-        logText = "Game ends\n";
-        FileWritter.fillInLog(logText);
+        writeLogText("Game ends\n");
+    }
 
+
+    static void writeLogText(String logText){
+        FileWritter.fillInLog(logText);
     }
 }
