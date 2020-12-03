@@ -9,21 +9,14 @@ public class UI {
     public static int getUserEntry(int tour){
         Scanner keyboard = new Scanner(System.in);
         int col = 0;
-        int i;
-        if (tour %2 == 0) {
-            i = 1;
-        }
-        else {
-            i = 2;
-        }
+
         try{
             col =  keyboard.nextInt();
         }
         catch(Exception e){
             System.out.println("You must enter an integer!");
         }
-        String log = ("Player " + i + " played in column " + col + "\n");
-        FileWritter.fillInLog(log);
+
         return col-1;
     }
 
@@ -54,13 +47,13 @@ public class UI {
 
                     if (playerType.equals("human") == true || playerType.equals("ia") == true) {
                         if (playerType.equals("human") == true) {
-                            tabPlayers[i] = new Player(playerName, 1);
+                            tabPlayers[i] = new Player(playerName, 1,i);
                             String log = ("Player " + i + " is human " + playerName + "\n");
                             FileWritter.fillInLog(log);
                         }
                         if (playerType.equals("ia") == true) {
-                            tabPlayers[i] = new Ia(playerName, 2, 1);
-                            String log = ("Player " + i + " is IA " + playerName + "\n");
+                            tabPlayers[i] = new Ia(playerName, 2, 1,i);
+                            String log = ("Player " + i + " is ia " + playerName + "\n");
                             FileWritter.fillInLog(log);
                         }
                     }else { end = false; }

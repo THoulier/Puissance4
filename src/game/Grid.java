@@ -1,6 +1,7 @@
 package game;
 
 import rules.*;
+import userInterface.FileWritter;
 
 public class Grid {
 
@@ -26,12 +27,23 @@ public class Grid {
         return nbline;
     }
     //int getCell(int i , int j){ return grid[i][j]; }
+
     //Col number validity
-    boolean colValidity(int col){
+    boolean colValidity(int col, int playerNb){
+        String logText = "";
+
         col ++;
-        System.out.println(col);
         if (col > nbcol || col<1){
             System.out.println("Column number must be between 1 and " + nbcol);
+            logText = "Error column no valid " + col + "\n";
+            FileWritter.fillInLog(logText);
+            return false;
+        }
+        col--;
+        if (grid[0][col] != 0) {
+            System.out.println("Column number " + col + " is full");
+            logText = "Error column full " + (col+1) + "\n";
+            FileWritter.fillInLog(logText);
             return false;
         }
         return true;
@@ -85,22 +97,16 @@ public class Grid {
     //Update grid
     int updateGrid(int col, int tour){
         int c = col+1;
-        if (grid[0][col] != 0) {
-            System.out.println("Column number " + c + " is full");
-            return -1;
-        } else {
-            int cpt = nbline - 1;
-            while (grid[cpt][col] != 0 && cpt != -1) {
-                cpt--;
-            }
-            if (tour % 2 == 0) {
-                grid[cpt][col] = 1;
-            } else {
-                grid[cpt][col] = 2;
-            }
-            return cpt;
+        int cpt = nbline - 1;
+        while (grid[cpt][col] != 0 && cpt != -1) {
+            cpt--;
         }
-
+        if (tour % 2 == 0) {
+            grid[cpt][col] = 1;
+        } else {
+            grid[cpt][col] = 2;
+        }
+        return cpt;
     }
 
     //Re initialize the grid
