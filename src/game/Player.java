@@ -3,10 +3,10 @@ package game;
 import userInterface.*;
 
 public class Player {
-    private String name;
-    private int playerValue;
+    private final String name;
+    private final int playerValue;
     private int win;
-    private int playerNb;
+    private final int playerNb;
 
     public Player(String name, int value, int nb) {
         this.name = name;

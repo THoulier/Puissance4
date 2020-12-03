@@ -6,7 +6,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.FileWriter;
 
-public class FileWritter extends UI{
+public class FileWritter {
 
     public static void fillInLog(String text ){
         try {

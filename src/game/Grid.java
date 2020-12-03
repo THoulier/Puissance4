@@ -6,9 +6,9 @@ import userInterface.FileWritter;
 public class Grid {
 
     //Attributes
-    private int nbcol;
-    private int nbline;
-    private int [][] grid;
+    private final int nbcol;
+    private final int nbline;
+    private final int [][] grid;
 
     //Constructor
     Grid(int c, int l){

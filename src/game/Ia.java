@@ -1,7 +1,7 @@
 package game;
 
 
-public class Ia  extends Player{
+public class Ia extends Player{
     int iaType;
     public Ia(String name, int value, int type, int nb) {
         super(name, value, nb);
