@@ -43,12 +43,12 @@ public class UI {
                 {
                     end = true;
                     String [] tab_entry= entry.split(" ");
-                    playerType = tab_entry[0];
                     if (tab_entry.length == 1) {
                         end = false;
                     }
                     else {
                         playerName = tab_entry[1];
+                        playerType = tab_entry[0];
                     }
                     for (int k = 2; k<tab_entry.length; k++) {
                         playerName = playerName +" "+ tab_entry[k];
