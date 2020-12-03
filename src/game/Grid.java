@@ -35,7 +35,7 @@ public class Grid {
         col ++;
         if (col > nbcol || col<1){
             System.out.println("Column number must be between 1 and " + nbcol);
-            logText = "Error column no valid " + col + "\n";
+            logText = "Error column invalid " + col + "\n";
             FileWritter.fillInLog(logText);
             return false;
         }

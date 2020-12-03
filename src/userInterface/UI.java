@@ -6,15 +6,20 @@ import java.util.Scanner;
 
 public class UI {
 
-    public static int getUserEntry(int tour){
+    public static int getUserEntry(){
         Scanner keyboard = new Scanner(System.in);
+        String str = "";
         int col = 0;
 
-        try{
-            col =  keyboard.nextInt();
+        str =  keyboard.nextLine();
+
+        try {
+            col = Integer.parseInt(str);
         }
-        catch(Exception e){
-            System.out.println("You must enter an integer!");
+        catch(NumberFormatException e){
+            String log = ("Error cell input " + str + "\n");
+            FileWritter.fillInLog(log);
+            System.out.println("Colomn must be an integer");
         }
 
         return col-1;
@@ -39,14 +44,19 @@ public class UI {
                     end = true;
                     String [] tab_entry= entry.split(" ");
                     playerType = tab_entry[0];
-                    playerName = tab_entry[1];
-
+                    if (tab_entry.length == 1) {
+                        end = false;
+                    }
+                    else {
+                        playerName = tab_entry[1];
+                    }
                     for (int k = 2; k<tab_entry.length; k++) {
                         playerName = playerName +" "+ tab_entry[k];
                     }
 
                     if (playerType.equals("human") == true || playerType.equals("ia") == true) {
                         if (playerType.equals("human") == true) {
+
                             tabPlayers[i] = new Player(playerName, 1,i);
                             String log = ("Player " + i + " is human " + playerName + "\n");
                             FileWritter.fillInLog(log);
@@ -61,6 +71,8 @@ public class UI {
 
                 if (end == false) {
                     System.out.print("You must enter a player type followed by a player name\n");
+                    String log = ("Error bad input player " + i + "\n");
+                    FileWritter.fillInLog(log);
                 } else {
                     System.out.println("Player " + i + " is " + playerName + " (" + playerType + ")");
                 }

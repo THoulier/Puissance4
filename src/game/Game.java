@@ -40,7 +40,7 @@ public class Game{
                 if (tab_players[playerNb].getPlayerValue()==2) { //if player is ia
                     col = tab_players[playerNb].randomIa(grid, tour);
                 } else {
-                    col = UI.getUserEntry(tour); //get column number
+                    col = UI.getUserEntry(); //get column number
                 }
 
                 if (grid.colValidity(col, playerNb) == true) {
