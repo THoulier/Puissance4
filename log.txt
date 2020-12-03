@@ -1,7 +1,3 @@
-Player 1 is human thierry
-Player 2 is IA popo
+Player 1 is human jean
+Player 2 is IA toto
 Player 1 played in column 1
-Player 1 played in column 2
-Player 1 played in column 2
-Player 1 played in column 2
-Player 1 played in column 2
