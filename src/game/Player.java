@@ -2,7 +2,7 @@ package game;
 
 import userInterface.*;
 
-public class Player {
+abstract public class Player {
     private final String name;
     private final int playerValue;
     private int win;
@@ -14,10 +14,8 @@ public class Player {
         this.win = 0;
         this.playerNb = nb;
     }
-    int randomIa (Grid grid, int tour){
-        int col = (int)(Math.random() * (grid.getNbcol()-1));
-        return col;
-    }
+
+    abstract int play (Grid grid, int tour);
 
     String getName() {
         return name;

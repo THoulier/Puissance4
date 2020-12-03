@@ -35,11 +35,7 @@ public class Game{
                 System.out.println(tab_players[playerNb].getPlayerValue());
                 System.out.println("turn n° " + real_turn);
 
-                if (tab_players[playerNb].getPlayerValue()==2) { //if player is ia
-                    col = tab_players[playerNb].randomIa(grid, tour);
-                } else {
-                    col = UI.getUserEntry(tour); //get column number
-                }
+                col = tab_players[playerNb].play(grid, tour); //player[playerNb] plays
 
                 if (grid.colValidity(col, playerNb) == true) {
 
@@ -50,7 +46,7 @@ public class Game{
                         grid.display();
                         if (grid.isWinning(col, line, tour) == true) {
                             System.out.println(tab_players[playerNb].getName() + " won the round");
-                            tab_players[1].setWin(1);
+                            tab_players[playerNb].setWin(1);
 
                             writeLogText("Player "+ playerNb + " wins\n");
                             writeLogText("Score "+ tab_players[1].getWin() +" - "+ tab_players[2].getWin() + "\n");

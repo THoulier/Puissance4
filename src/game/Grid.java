@@ -96,7 +96,6 @@ public class Grid {
 
     //Update grid
     int updateGrid(int col, int tour){
-        int c = col+1;
         int cpt = nbline - 1;
         while (grid[cpt][col] != 0 && cpt != -1) {
             cpt--;
@@ -110,7 +109,6 @@ public class Grid {
     }
 
     //Re initialize the grid
-
     void initGrid(){
         for (int i = 0; i<nbline; i++){
             for (int j = 0; j<nbcol; j++){

@@ -8,9 +8,8 @@ public class Ia extends Player{
         this.iaType = type;
     }
 
-    int randomIa (Grid grid){
-        int col = (int)(Math.random() * grid.getNbcol());
-        col ++;
+    int play (Grid grid, int tour){
+        int col = (int)(Math.random() * (grid.getNbcol()-1)) + 1;
         return col;
     }
 
