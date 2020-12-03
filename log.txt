@@ -1,29 +1,10 @@
 Error bad input player 1
-Player 1 is human 
-Error bad input player 1
-Error bad input player 1
-Player 1 is human Piemme
-Player 2 is ia ia
+Player 1 is human toto
+Player 2 is ia jean
 Round begins
-Error column invalid -7
-Error cell input Une teub
-Error column invalid 0
 Player 1 plays 1
-Player 2 plays 3
-Player 1 plays 1
-Player 2 plays 2
-Player 1 plays 1
-Player 2 plays 2
+Player 2 plays 4
 Player 1 plays 2
-Player 2 plays 1
-Player 1 plays 4
-Player 2 plays 5
+Player 2 plays 2
 Player 1 plays 1
-Player 2 plays 1
-Player 1 plays 1
-Player 2 plays 5
-Error column full 1
-Player 1 plays 5
-Player 2 plays 5
-Error column full 1
-Error column full 1
+Player 2 plays 4

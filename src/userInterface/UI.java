@@ -57,7 +57,7 @@ public class UI {
                     if (playerType.equals("human") == true || playerType.equals("ia") == true) {
                         if (playerType.equals("human") == true) {
 
-                            tabPlayers[i] = new Player(playerName, 1,i);
+                            tabPlayers[i] = new Human(playerName, 1,i);
                             String log = ("Player " + i + " is human " + playerName + "\n");
                             FileWritter.fillInLog(log);
                         }
