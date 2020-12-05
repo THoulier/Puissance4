@@ -15,7 +15,7 @@ abstract public class Player {
         this.playerNb = nb;
     }
 
-    abstract int play (Grid grid);
+    abstract int play (Grid grid, int tour);
 
     String getName() {
         return name;

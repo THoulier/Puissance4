@@ -26,7 +26,7 @@ public class Grid {
     int getNbline(){
         return nbline;
     }
-    //int getCell(int i , int j){ return grid[i][j]; }
+    int getCell(int i , int j){ return grid[i][j]; }
 
     //Col number validity
     boolean colValidity(int col, int playerNb){
