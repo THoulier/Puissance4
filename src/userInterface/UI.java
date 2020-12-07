@@ -62,7 +62,12 @@ public class UI {
                             FileWritter.fillInLog(log);
                         }
                         if (playerType.equals("ia") == true) {
-                            tabPlayers[i] = new Ia(playerName, 2, 1,i);
+                            if(playerName.equals("monkey") == true){
+                                tabPlayers[i] = new Ia(playerName, 2, 2,i);
+                            }
+                            else{
+                                tabPlayers[i] = new Ia(playerName, 2, 1,i);
+                            }
                             String log = ("Player " + i + " is ia " + playerName + "\n");
                             FileWritter.fillInLog(log);
                         }

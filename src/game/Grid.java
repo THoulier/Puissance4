@@ -116,6 +116,18 @@ public class Grid {
             }
         }
     }
+
+    //Copy the grid
+    int [][] copyGrid(){
+        int [][] gridOut = new int [nbline][nbcol];
+        for (int i = 0; i<nbline; i++){
+            for (int j = 0; j<nbcol; j++){
+                gridOut[i][j] = grid[i][j];
+            }
+        }
+        return gridOut;
+    }
+
     //Display grid
     void display(){
         System.out.println();

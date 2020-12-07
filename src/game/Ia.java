@@ -15,7 +15,7 @@ public class Ia extends Player{
             col = randomIa(grid);
         }
         else if (iaType == 2){
-            //col = bestPlay(tour, grid);
+            col = bestPlay(tour, grid);
         }
         return col;
     }
@@ -24,115 +24,76 @@ public class Ia extends Player{
         return (int) (Math.random() * (grid.getNbcol() - 1)) + 1;
     }
 
-/*
+
     int bestPlay(int i, Grid grid){
+
+        int[][] gridBis = grid.copyGrid(); //copy the real grid in a virtual one
         int playerValue = 0;
         if (i%2 == 0){
             playerValue = 1;
         } else{
             playerValue = 2;
         }
-        System.out.println("player : " + playerValue);
+
         int [] tabMax = new int[grid.getNbcol()];
 
-        int align = 1; int max = 0;
-
+        int align = 0; int max = 0;
+        //simulate each plays and calculate the alignment. The play with the best alignment will be the next play
         for (int j = 0; j< grid.getNbcol(); j++) {
+
+            int cpt = grid.getNbline() - 1;
+            while (gridBis[cpt][j] != 0 && cpt != -1) {
+                cpt--;
+            }
+            gridBis[cpt][j] = playerValue;
 
             int line = grid.getNbline() - 1;
             while (grid.getCell(line,j) != 0 && line != -1) {
                 line--;
             }
 
-            System.out.println("line : " + line);
-            System.out.println("test : " + grid.getCell(line, 0));
             int li = line; int col = j;
-            li++;
+
             //Vertical
-            while (li < grid.getNbline() && grid.getCell(li, col) == playerValue) {
-                li++;
-                align++;
-            }
-            if (align > max) {
-                max = align;
-            }
-            System.out.println("vertical : " + max);
+            align = 0; max = 0;
+            while (li < grid.getNbline() && gridBis[li][col] == playerValue) { li++; align++; }
+            if (align > max) { max = align; }
+
+
             //Horizontal
-            align = 0;
-            col = j;
-            li = line;
-            li++; col++;
-            while (li < grid.getNbline() && col < grid.getNbcol() && grid.getCell(li, col) == playerValue) {
-                col++;
-                align++;
-            }
-            col = j;
-            li = line;
-            li++; col++;
-            while (li < grid.getNbline() && col >= 0 && grid.getCell(li, col) == playerValue) {
-                col--;
-                align++;
-            }
-            if (align > max) {
-                max = align;
-            }
-            System.out.println("horizontal : " + max);
+            align = -1; col = j; li = line;
+            while (col < grid.getNbcol() && gridBis[li][col] == playerValue) { col++; align++; }
+            col = j; li = line;
+            while (col >= 0 && gridBis[li][col] == playerValue) { col--; align++; }
+            if (align > max) { max = align; }
 
             //Diag1
-            align = 0;
-            col = j;
-            li = line;
-            li++; col++;
-            while (li < grid.getNbline() && col < grid.getNbcol() && grid.getCell(li, col) == playerValue) {
-                col++;
-                li++;
-                align++;
-            }
-            col = j;
-            li = line;
-            li++; col++;
-            while (li < grid.getNbline() && li >= 0 && col >= 0 && grid.getCell(li, col) == playerValue) {
-                col--;
-                li--;
-                align++;
-            }
-            if (align > max) {
-                max = align;
-            }
+            align = -1;col = j; li = line;
+            while (li < grid.getNbline() && col < grid.getNbcol() && gridBis[li][col] == playerValue) { col++; li++; align++; }
+            col = j; li = line;
+            while (li >= 0 && col >= 0 && gridBis[li][col] == playerValue) { col--; li--; align++; }
+            if (align > max) { max = align; }
 
             //Diag2
-            align = 0;
-            col = j;
-            li = line;
-            li++; col++;
-            while (li < grid.getNbline() && col >= 0 && grid.getCell(li, col) == playerValue) {
-                col--;
-                li++;
-                align++;
-            }
-            col = j;
-            li = line;
-            li++; col++;
-            while (li < grid.getNbline() && li >= 0 && col < grid.getNbcol() && grid.getCell(li, col) == playerValue) {
-                col++;
-                li--;
-                align++;
-            }
-            if (align > max) {
-                max = align;
-            }
-            System.out.println("diag2 : " + max);
+            align = -1; col = j; li = line;
+            while (li < grid.getNbline() && col >= 0 && gridBis[li][col] == playerValue) { col--; li++; align++; }
+            col = j; li = line;
+            while (li >= 0 && col < grid.getNbcol() && gridBis[li][col] == playerValue) { col++; li--; align++; }
+            if (align > max) { max = align; }
 
             tabMax[j] = max;
+
+            gridBis[cpt][j] = 0;
         }
-        int bestCol = 0;
+
+        int bestPlay = 0; int bestCol = 0;
         for (int k = 0; k< grid.getNbcol(); k++){
             System.out.println(tabMax[k]);
-            if (tabMax[k] > bestCol){
-                bestCol = tabMax[k];
+            if (tabMax[k] > bestPlay){
+                bestPlay = tabMax[k];
+                bestCol = k;
             }
         }
-        System.out.println("bestcol : " + bestCol);
         return bestCol;
-    }*/
+    }
 }
