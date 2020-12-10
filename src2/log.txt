@@ -1,0 +1,4 @@
+Player 1 is ia a
+Player 2 is human b
+Round begins
+Player 1 plays 6
