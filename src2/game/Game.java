@@ -13,11 +13,18 @@ public class Game{
     //Main function :  run the game
     public static void main(String[] var0) {
         Game game = new Game(); //Create a new game
-
+        int roundToWin = game.gameInitParameters();
         Player [] tab_players = game.gameInit(); //Get the filled in tab players
-        game.runGame(tab_players, game); //Run the main function
+        game.runGame(tab_players, game, roundToWin); //Run the main function
         game.gameEnds(tab_players, game); //game ends
 
+    }
+
+    //Init parameters
+    int gameInitParameters(){
+
+        int roundToWin = UI.interfaceRounds(); //Initialize number of rounds to win
+        return roundToWin;
     }
 
     //Init game
@@ -29,12 +36,12 @@ public class Game{
     }
 
     //Run the main game
-    void runGame(Player [] tab_players, Game game){
+    void runGame(Player [] tab_players, Game game, int roundToWin){
         Grid grid = new Grid(6,7); //Create the grid
 
         int round = 1;
 
-        while (tab_players[1].getWin() < 3 && tab_players[2].getWin() < 3) {
+        while (tab_players[1].getWin() < roundToWin && tab_players[2].getWin() < roundToWin) {
             game.writeLogText("Round begins\n");
 
             System.out.println("Score : "+ tab_players[1].getWin() +" - "+ tab_players[2].getWin());

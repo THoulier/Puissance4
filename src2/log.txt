@@ -1,4 +1,331 @@
 Player 1 is ia a
-Player 2 is human b
+Player 2 is ia b
 Round begins
 Player 1 plays 6
+Player 2 plays 3
+Player 1 plays 5
+Player 2 plays 4
+Player 1 plays 6
+Player 2 plays 6
+Player 1 plays 5
+Player 2 plays 3
+Player 1 plays 6
+Player 2 plays 6
+Player 1 plays 4
+Player 2 plays 4
+Player 1 plays 6
+Player 2 plays 4
+Player 1 plays 3
+Player 2 plays 2
+Player 1 plays 6
+Player 2 plays 3
+Player 1 plays 5
+Player 2 plays 3
+Player 1 plays 3
+Error column full 6
+Player 2 plays 3
+Player 1 plays 2
+Error column full 6
+Error column full 3
+Error column full 3
+Player 2 plays 4
+Error column full 6
+Error column full 3
+Player 1 plays 5
+Player 1 wins
+Score 1 - 0
+Round begins
+Player 2 plays 5
+Player 1 plays 5
+Player 2 plays 5
+Player 1 plays 3
+Player 2 plays 4
+Player 1 plays 4
+Player 2 plays 4
+Player 1 plays 6
+Player 2 plays 2
+Player 1 plays 3
+Player 2 plays 5
+Player 1 plays 6
+Player 1 wins
+Score 2 - 0
+Round begins
+Player 1 plays 3
+Player 2 plays 6
+Player 1 plays 3
+Player 2 plays 4
+Player 1 plays 4
+Player 2 plays 5
+Player 1 plays 4
+Player 2 plays 6
+Player 1 plays 5
+Player 2 plays 5
+Player 1 plays 5
+Player 2 plays 5
+Player 1 plays 6
+Player 2 plays 4
+Player 1 plays 6
+Player 2 plays 3
+Player 1 plays 4
+Player 2 plays 4
+Player 1 plays 3
+Player 2 plays 3
+Player 2 wins
+Score 2 - 1
+Round begins
+Player 2 plays 6
+Player 1 plays 6
+Player 2 plays 6
+Player 1 plays 6
+Player 2 plays 2
+Player 1 plays 4
+Player 2 plays 6
+Player 1 plays 2
+Player 2 plays 6
+Player 1 plays 5
+Player 2 plays 3
+Player 1 plays 5
+Player 2 plays 6
+Player 1 plays 4
+Player 2 plays 2
+Player 1 plays 2
+Player 2 plays 5
+Player 1 plays 2
+Player 2 plays 3
+Player 1 plays 2
+Player 2 plays 2
+Player 1 plays 3
+Player 1 wins
+Score 3 - 1
+Round begins
+Player 1 plays 5
+Player 2 plays 5
+Player 1 plays 2
+Player 2 plays 3
+Player 1 plays 3
+Player 2 plays 6
+Player 1 plays 3
+Player 2 plays 3
+Player 1 plays 6
+Player 2 plays 5
+Player 1 plays 5
+Player 2 plays 2
+Player 1 plays 5
+Player 2 plays 6
+Player 1 plays 4
+Player 2 plays 5
+Player 1 plays 4
+Player 2 plays 6
+Player 1 plays 2
+Player 2 plays 4
+Player 2 wins
+Score 3 - 2
+Round begins
+Player 2 plays 5
+Player 1 plays 2
+Player 2 plays 2
+Player 1 plays 6
+Player 2 plays 5
+Player 1 plays 2
+Player 2 plays 6
+Player 1 plays 3
+Player 2 plays 2
+Player 1 plays 2
+Player 2 plays 2
+Player 1 plays 2
+Player 2 plays 6
+Player 1 plays 5
+Player 2 plays 5
+Player 1 plays 6
+Player 2 plays 4
+Player 1 plays 4
+Player 1 wins
+Score 4 - 2
+Round begins
+Player 1 plays 4
+Player 2 plays 3
+Player 1 plays 3
+Player 2 plays 6
+Player 1 plays 3
+Player 2 plays 6
+Player 1 plays 3
+Player 2 plays 2
+Player 1 plays 6
+Player 2 plays 4
+Player 1 plays 2
+Player 2 plays 3
+Player 1 plays 6
+Player 2 plays 3
+Player 1 plays 3
+Error column full 3
+Player 2 plays 6
+Error column full 3
+Error column full 3
+Error column full 3
+Player 1 plays 2
+Error column full 3
+Error column full 3
+Player 2 plays 5
+Player 1 plays 6
+Player 2 plays 4
+Player 1 plays 6
+Error column full 3
+Player 2 plays 5
+Error column full 6
+Error column full 3
+Error column full 3
+Player 1 plays 5
+Error column full 6
+Error column full 6
+Player 2 plays 2
+Error column full 6
+Error column full 3
+Error column full 3
+Player 1 plays 2
+Player 2 plays 2
+Player 1 plays 2
+Player 2 plays 4
+Player 1 plays 5
+Player 2 plays 4
+Player 2 wins
+Score 4 - 3
+Round begins
+Player 2 plays 4
+Player 1 plays 4
+Player 2 plays 3
+Player 1 plays 3
+Player 2 plays 6
+Player 1 plays 5
+Player 2 plays 5
+Player 1 plays 5
+Player 2 plays 2
+Player 1 plays 2
+Player 2 plays 5
+Player 1 plays 5
+Player 2 plays 4
+Player 1 plays 4
+Player 2 plays 4
+Player 1 plays 5
+Player 2 plays 5
+Error column full 5
+Error column full 5
+Player 1 plays 3
+Player 1 wins
+Score 5 - 3
+Round begins
+Player 1 plays 3
+Player 2 plays 4
+Player 1 plays 6
+Player 2 plays 6
+Player 1 plays 3
+Player 2 plays 4
+Player 1 plays 3
+Player 2 plays 4
+Player 1 plays 6
+Player 2 plays 6
+Player 1 plays 2
+Player 2 plays 4
+Player 2 wins
+Score 5 - 4
+Round begins
+Player 2 plays 6
+Player 1 plays 4
+Player 2 plays 2
+Player 1 plays 6
+Player 2 plays 3
+Player 1 plays 3
+Player 2 plays 4
+Player 1 plays 6
+Player 2 plays 4
+Player 1 plays 6
+Player 2 plays 6
+Player 1 plays 4
+Player 2 plays 3
+Player 1 plays 4
+Player 2 plays 2
+Player 1 plays 4
+Player 2 plays 3
+Player 1 plays 4
+Player 1 wins
+Score 6 - 4
+Round begins
+Player 1 plays 5
+Player 2 plays 2
+Player 1 plays 3
+Player 2 plays 5
+Player 1 plays 6
+Player 2 plays 5
+Player 1 plays 2
+Player 2 plays 2
+Player 1 plays 3
+Player 2 plays 6
+Player 1 plays 2
+Player 2 plays 2
+Player 1 plays 2
+Player 2 plays 2
+Player 1 plays 5
+Player 2 plays 6
+Player 1 plays 4
+Player 1 wins
+Score 7 - 4
+Round begins
+Player 2 plays 3
+Player 1 plays 4
+Player 2 plays 3
+Player 1 plays 4
+Player 2 plays 5
+Player 1 plays 5
+Player 2 plays 5
+Player 1 plays 6
+Player 2 plays 6
+Player 1 plays 4
+Player 2 plays 3
+Player 1 plays 3
+Player 1 wins
+Score 8 - 4
+Round begins
+Player 1 plays 3
+Player 2 plays 4
+Player 1 plays 2
+Player 2 plays 3
+Player 1 plays 4
+Player 2 plays 5
+Player 1 plays 2
+Player 2 plays 5
+Player 1 plays 4
+Player 2 plays 5
+Player 1 plays 4
+Player 2 plays 5
+Player 2 wins
+Score 8 - 5
+Round begins
+Player 2 plays 6
+Player 1 plays 5
+Player 2 plays 6
+Player 1 plays 4
+Player 2 plays 6
+Player 1 plays 5
+Player 2 plays 6
+Player 2 wins
+Score 8 - 6
+Round begins
+Player 1 plays 4
+Player 2 plays 2
+Player 1 plays 4
+Player 2 plays 2
+Player 1 plays 6
+Player 2 plays 2
+Player 1 plays 2
+Player 2 plays 5
+Player 1 plays 6
+Player 2 plays 4
+Player 1 plays 2
+Player 2 plays 2
+Player 1 plays 5
+Player 2 plays 6
+Player 1 plays 3
+Player 2 plays 4
+Player 1 plays 3
+Player 1 wins
+Score 9 - 6
+Game ends

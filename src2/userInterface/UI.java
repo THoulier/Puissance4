@@ -85,8 +85,45 @@ public class UI {
             i++;
         }
 
-
-
         return tabPlayers;
     }
+
+    public static int interfaceRounds(){
+        int rounds = 0;
+        String str = "";
+        int i = 1;
+        Scanner keyboard = new Scanner(System.in);
+        while (i < 2) {
+            boolean end = false;
+
+
+            System.out.println("How many rounds? (1 to 9)");
+            do {
+                str = keyboard.nextLine();
+
+                try {
+                    rounds = Integer.parseInt(str);
+                } catch(NumberFormatException e){
+                    end = false;
+                }
+
+                if (rounds<10 && rounds>0){
+                    end = true;
+                }
+
+                if (end == false) {
+                    String log = ("Error rounds number input " + rounds + "\n");
+                    FileWritter.fillInLog(log);
+                    System.out.println("Rounds number must be an integer between 1 and 9");
+                } else {
+                    System.out.println("You must win "+ rounds +" to win the game\n");
+                }
+            } while (!end);
+            i++;
+        }
+        return rounds;
+    }
+
+
+
 }
