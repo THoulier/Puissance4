@@ -15,7 +15,7 @@ abstract public class Player {
         this.playerNb = nb;
     }
 
-    abstract int play (Grid grid, int tour);
+    abstract int [] play (Grid grid, int tour);
 
     String getName() {
         return name;
@@ -27,6 +27,6 @@ abstract public class Player {
     int getNb() {
         return playerNb;
     }
-    int setWin(int value) { win = win + value; return win; }
+    int setWin() { win = win + 1; return win; }
 
 }

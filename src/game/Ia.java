@@ -9,7 +9,8 @@ public class Ia extends Player{
         this.iaType = type;
     }
 
-    int play (Grid grid, int tour){
+    int [] play (Grid grid, int tour){
+        int [] tab = new int[2];
         int col = 0;
         if (iaType == 1) {
             col = randomIa(grid);
@@ -17,7 +18,10 @@ public class Ia extends Player{
         else if (iaType == 2){
             col = bestPlay(tour, grid);
         }
-        return col;
+        tab[0] = col;
+        tab[1] = 0;
+
+        return tab;
     }
 
     int randomIa(Grid grid){

@@ -6,23 +6,30 @@ import java.util.Scanner;
 
 public class UI {
 
-    public static int getUserEntry(){
+    public static int [] getUserEntry(){
         Scanner keyboard = new Scanner(System.in);
         String str = "";
-        int col = 0;
+        int col = 0; int exit = 0;
+        int [] tab = new int[2];
 
         str =  keyboard.nextLine();
 
-        try {
-            col = Integer.parseInt(str);
-        }
-        catch(NumberFormatException e){
-            String log = ("Error cell input " + str + "\n");
-            FileWritter.fillInLog(log);
-            System.out.println("Colomn must be an integer");
-        }
+        if (str.equals("exit") == true){
+            exit = 1;
+            col = 1;
+        } else {
 
-        return col-1;
+            try {
+                col = Integer.parseInt(str);
+            } catch (NumberFormatException e) {
+                String log = ("Error cell input " + str + "\n");
+                FileWritter.fillInLog(log);
+                System.out.println("Colomn must be an integer");
+            }
+        }
+        tab [0] = col-1;
+        tab [1] = exit;
+        return tab;
     }
 
     public static Player[] interfacePlayer() {
