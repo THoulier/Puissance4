@@ -47,16 +47,16 @@ public class UI implements UInterface{
                 if (entry.matches("^[a-zA-Z ]*$"))
                 {
                     end = true;
-                    String [] tab_entry= entry.split(" ");
-                    if (tab_entry.length == 1) {
+                    String [] tabEntry= entry.split(" ");
+                    if (tabEntry.length == 1) {
                         end = false;
                     }
                     else {
-                        playerName = tab_entry[1];
-                        playerType = tab_entry[0];
+                        playerName = tabEntry[1];
+                        playerType = tabEntry[0];
                     }
-                    for (int k = 2; k<tab_entry.length; k++) {
-                        playerName = playerName +" "+ tab_entry[k];
+                    for (int k = 2; k<tabEntry.length; k++) {
+                        playerName = playerName +" "+ tabEntry[k];
                     }
 
                     if (playerType.equals("human") == true || playerType.equals("ia") == true) {
@@ -105,7 +105,6 @@ public class UI implements UInterface{
             System.out.println("How many rounds? (1 to 9)");
             do {
                 str = keyboard.nextLine();
-                String [] tab_entry= str.split(" : ");
                 try {
                     rounds = Integer.parseInt(str);
                 } catch(NumberFormatException e){
@@ -129,41 +128,48 @@ public class UI implements UInterface{
         return rounds;
     }
 
-    /*public static int interfaceGridSize(){
+    public int [] interfaceGridSize(){
         int [] tabGridSize = new int[2];
         String str = "";
         int i = 1;
+        int col = 0; int line = 0;
         Scanner keyboard = new Scanner(System.in);
         while (i < 2) {
             boolean end = false;
 
-
             System.out.println("Size of the grid? <linexcolumn>");
             do {
                 str = keyboard.nextLine();
+                String [] tabEntry = str.split("x");
 
-                try {
-                    rounds = Integer.parseInt(str);
-                } catch(NumberFormatException e){
+                if (tabEntry.length != 2) {
                     end = false;
-                }
+                } else {
+                    try {
+                        col = Integer.parseInt(tabEntry[1]);
+                        line = Integer.parseInt(tabEntry[0]);
+                    } catch (NumberFormatException e) {
+                        end = false;
+                    }
 
-                if (rounds<10 && rounds>0){
-                    end = true;
+                    if ((line * col) % 2 == 0 && col > 3 && (line * col) > 7) {
+                        end = true;
+                    }
                 }
 
                 if (end == false) {
-                    String log = ("Error rounds number input " + rounds + "\n");
-                    FileWritter.fillInLog(log);
-                    System.out.println("Rounds number must be an integer between 1 and 9");
+                    String log = ("Error grid size input " + line +" x " + col + "\n");
+                    fileWritter.fillInLog(log);
+                    System.out.println("Incorrect grid size, reminder : line x column must be even and greater than 7, column must be greater than 3\n");
                 } else {
-                    System.out.println("You must win "+ rounds +" to win the game\n");
+                    tabGridSize[0] = line;
+                    tabGridSize[1] = col;
                 }
             } while (!end);
             i++;
         }
-        return rounds;
-    }*/
+        return tabGridSize;
+    }
 
 
 

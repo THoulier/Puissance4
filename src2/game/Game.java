@@ -7,6 +7,7 @@ import java.io.File;
 public class Game{
     //Attributes
     private final Player [] tabPlayers;
+    private final int [] tabGridSize;
     private final int roundToWin;
     private final Grid grid;
     private final UInterface ui;
@@ -18,32 +19,25 @@ public class Game{
         displayer = new Displayer();
         ui = new UI();
         fileWritter = new FileWritter();
-        roundToWin = this.gameInitParameters();
-        tabPlayers = this.gameInit(); //Get the filled in tab players
-        grid = new Grid(7,6); //Create the grid
+        tabGridSize = ui.interfaceGridSize();
+        roundToWin = ui.interfaceRounds();
+        tabPlayers = ui.interfacePlayer(); //Get the filled in tab players
+        grid = new Grid(tabGridSize[1],tabGridSize[0]); //Create the grid
     }
 
     //Main function :  run the game
     public static void main(String[] var0) {
         Game game = new Game(); //Create a new game
+        game.gameInit(); //init game
         game.runGame(); //Run the main function
         game.gameEnds(); //game ends
-
     }
 
-    //Init parameters
-    int gameInitParameters(){
-
-        int roundToWin = ui.interfaceRounds(); //Initialize number of rounds to win
-        return roundToWin;
-    }
 
     //Init game
-    Player [] gameInit(){
+    void gameInit(){
         File log = new File("log.txt");
         log.delete();
-        Player [] tabPlayers = ui.interfacePlayer(); //Create two players
-        return tabPlayers;
     }
 
     //Run the main game

@@ -6,4 +6,5 @@ public interface UInterface {
     public int interfaceRounds();
     public int getUserEntry();
     public Player[] interfacePlayer();
+    public int [] interfaceGridSize();
 }

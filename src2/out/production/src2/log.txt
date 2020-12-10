@@ -1,98 +1,95 @@
-Player 1 is ia random
-Player 2 is ia monkey
 Round begins
-Player 1 plays 2
-Player 2 plays 1
-Player 1 plays 6
-Player 2 plays 1
-Player 1 plays 2
-Player 2 plays 1
-Player 1 plays 4
-Player 2 plays 1
-Player 2 wins
-Score 0 - 1
+Player 1 plays 1
+Player 2 plays 2
+Player 1 plays 1
+Player 2 plays 3
+Player 1 plays 1
+Player 2 plays 9
+Player 1 plays 1
+Player 1 wins
+Score 1 - 0
 Round begins
-Player 2 plays 1
-Player 1 plays 7
-Player 2 plays 1
-Player 1 plays 5
-Player 2 plays 1
-Player 1 plays 6
-Player 2 plays 1
-Player 2 wins
-Score 0 - 2
+Player 2 plays 5
+Player 1 plays 1
+Player 2 plays 3
+Player 1 plays 1
+Player 2 plays 7
+Player 1 plays 1
+Player 2 plays 6
+Player 1 plays 1
+Player 1 wins
+Score 2 - 0
 Round begins
-Player 1 plays 2
-Player 2 plays 1
-Player 1 plays 3
-Player 2 plays 1
-Player 1 plays 2
-Player 2 plays 1
-Player 1 plays 3
-Player 2 plays 1
-Player 2 wins
-Score 0 - 3
+Player 1 plays 1
+Player 2 plays 5
+Player 1 plays 1
+Player 2 plays 6
+Player 1 plays 1
+Player 2 plays 5
+Player 1 plays 1
+Player 1 wins
+Score 3 - 0
 Round begins
-Player 2 plays 1
-Player 1 plays 5
-Player 2 plays 1
-Player 1 plays 7
-Player 2 plays 1
-Player 1 plays 2
-Player 2 plays 1
-Player 2 wins
-Score 0 - 4
+Player 2 plays 9
+Player 1 plays 1
+Player 2 plays 4
+Player 1 plays 1
+Player 2 plays 2
+Player 1 plays 1
+Player 2 plays 3
+Player 1 plays 1
+Player 1 wins
+Score 4 - 0
 Round begins
-Player 1 plays 7
-Player 2 plays 1
-Player 1 plays 2
-Player 2 plays 1
-Player 1 plays 3
-Player 2 plays 1
-Player 1 plays 7
-Player 2 plays 1
-Player 2 wins
-Score 0 - 5
+Player 1 plays 1
+Player 2 plays 2
+Player 1 plays 1
+Player 2 plays 3
+Player 1 plays 1
+Player 2 plays 7
+Player 1 plays 1
+Player 1 wins
+Score 5 - 0
 Round begins
-Player 2 plays 1
-Player 1 plays 6
-Player 2 plays 1
-Player 1 plays 2
-Player 2 plays 1
-Player 1 plays 2
-Player 2 plays 1
-Player 2 wins
-Score 0 - 6
+Player 2 plays 7
+Player 1 plays 1
+Player 2 plays 9
+Player 1 plays 1
+Player 2 plays 8
+Player 1 plays 1
+Player 2 plays 7
+Player 1 plays 1
+Player 1 wins
+Score 6 - 0
 Round begins
-Player 1 plays 7
-Player 2 plays 1
-Player 1 plays 4
-Player 2 plays 1
-Player 1 plays 6
-Player 2 plays 1
-Player 1 plays 6
-Player 2 plays 1
-Player 2 wins
-Score 0 - 7
+Player 1 plays 1
+Player 2 plays 2
+Player 1 plays 1
+Player 2 plays 8
+Player 1 plays 1
+Player 2 plays 2
+Player 1 plays 1
+Player 1 wins
+Score 7 - 0
 Round begins
-Player 2 plays 1
-Player 1 plays 7
-Player 2 plays 1
-Player 1 plays 3
-Player 2 plays 1
-Player 1 plays 6
-Player 2 plays 1
-Player 2 wins
-Score 0 - 8
+Player 2 plays 9
+Player 1 plays 1
+Player 2 plays 2
+Player 1 plays 1
+Player 2 plays 6
+Player 1 plays 1
+Player 2 plays 9
+Player 1 plays 1
+Player 1 wins
+Score 8 - 0
 Round begins
-Player 1 plays 5
-Player 2 plays 1
-Player 1 plays 6
-Player 2 plays 1
-Player 1 plays 6
-Player 2 plays 1
-Player 1 plays 7
-Player 2 plays 1
-Player 2 wins
-Score 0 - 9
+Player 1 plays 1
+Player 2 plays 9
+Player 1 plays 1
+Player 2 plays 8
+Player 1 plays 1
+Player 2 plays 9
+Player 1 plays 1
+Player 1 wins
+Score 9 - 0
 Game ends

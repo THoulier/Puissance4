@@ -1,14 +1,96 @@
-Player 1 is ia a
-Player 2 is ia monkey
 Round begins
 Player 1 plays 7
 Player 2 plays 1
+Player 1 plays 7
+Player 2 plays 1
+Player 1 plays 3
+Player 2 plays 1
+Player 1 plays 7
+Player 2 plays 1
+Player 2 wins
+Score 0 - 1
+Round begins
+Player 2 plays 1
+Player 1 plays 6
+Player 2 plays 1
+Player 1 plays 3
+Player 2 plays 1
+Player 1 plays 6
+Player 2 plays 1
+Player 2 wins
+Score 0 - 2
+Round begins
+Player 1 plays 7
+Player 2 plays 1
+Player 1 plays 6
+Player 2 plays 1
+Player 1 plays 6
+Player 2 plays 1
+Player 1 plays 6
+Player 2 plays 1
+Player 2 wins
+Score 0 - 3
+Round begins
+Player 2 plays 1
+Player 1 plays 2
+Player 2 plays 1
+Player 1 plays 7
+Player 2 plays 1
+Player 1 plays 3
+Player 2 plays 1
+Player 2 wins
+Score 0 - 4
+Round begins
+Player 1 plays 6
+Player 2 plays 1
+Player 1 plays 6
+Player 2 plays 1
+Player 1 plays 5
+Player 2 plays 1
+Player 1 plays 6
+Player 2 plays 1
+Player 2 wins
+Score 0 - 5
+Round begins
+Player 2 plays 1
+Player 1 plays 2
+Player 2 plays 1
+Player 1 plays 3
+Player 2 plays 1
+Player 1 plays 6
+Player 2 plays 1
+Player 2 wins
+Score 0 - 6
+Round begins
 Player 1 plays 3
 Player 2 plays 1
 Player 1 plays 3
 Player 2 plays 1
 Player 1 plays 2
 Player 2 plays 1
+Player 1 plays 5
+Player 2 plays 1
 Player 2 wins
-Score 0 - 1
+Score 0 - 7
+Round begins
+Player 2 plays 1
+Player 1 plays 7
+Player 2 plays 1
+Player 1 plays 7
+Player 2 plays 1
+Player 1 plays 4
+Player 2 plays 1
+Player 2 wins
+Score 0 - 8
+Round begins
+Player 1 plays 2
+Player 2 plays 1
+Player 1 plays 2
+Player 2 plays 1
+Player 1 plays 4
+Player 2 plays 1
+Player 1 plays 3
+Player 2 plays 1
+Player 2 wins
+Score 0 - 9
 Game ends

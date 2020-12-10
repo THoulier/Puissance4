@@ -31,6 +31,18 @@ public class Grid {
     }
     public int getCell(int i , int j){ return grid[i][j]; }
 
+    //Col full
+    public boolean colIsFull(int col){
+
+        boolean isFull = true;
+        for (int i = 0; i<nbline; i++){
+            if (grid[i][col] == 0){
+                isFull = false;
+            }
+        }
+        return isFull;
+    }
+
     //Col number validity
     boolean colValidity(int col, int playerNb){
         String logText = "";
