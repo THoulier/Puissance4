@@ -4,9 +4,14 @@ import game.*;
 
 import java.util.Scanner;
 
-public class UI {
+public class UI implements UInterface{
+    private final FileWritter fileWritter;
+    //Constructor
+    public UI(){
+        fileWritter = new FileWritter();
+    }
 
-    public static int getUserEntry(){
+    public int getUserEntry(){
         Scanner keyboard = new Scanner(System.in);
         String str = "";
         int col = 0;
@@ -18,14 +23,14 @@ public class UI {
         }
         catch(NumberFormatException e){
             String log = ("Error cell input " + str + "\n");
-            FileWritter.fillInLog(log);
+            fileWritter.fillInLog(log);
             System.out.println("Colomn must be an integer");
         }
 
         return col-1;
     }
 
-    public static Player[] interfacePlayer() {
+    public Player[] interfacePlayer() {
         Player [] tabPlayers = new Player[3];
         Scanner keyboard = new Scanner(System.in);
         int i = 1;
@@ -59,7 +64,7 @@ public class UI {
 
                             tabPlayers[i] = new Human(playerName, 1,i);
                             String log = ("Player " + i + " is human " + playerName + "\n");
-                            FileWritter.fillInLog(log);
+                            fileWritter.fillInLog(log);
                         }
                         if (playerType.equals("ia") == true) {
                             if(playerName.equals("monkey") == true){
@@ -69,7 +74,7 @@ public class UI {
                                 tabPlayers[i] = new Ia(playerName, 2, 1,i);
                             }
                             String log = ("Player " + i + " is ia " + playerName + "\n");
-                            FileWritter.fillInLog(log);
+                            fileWritter.fillInLog(log);
                         }
                     }else { end = false; }
                 }
@@ -77,7 +82,7 @@ public class UI {
                 if (end == false) {
                     System.out.print("You must enter a player type followed by a player name\n");
                     String log = ("Error bad input player " + i + "\n");
-                    FileWritter.fillInLog(log);
+                    fileWritter.fillInLog(log);
                 } else {
                     System.out.println("Player " + i + " is " + playerName + " (" + playerType + ")");
                 }
@@ -88,7 +93,7 @@ public class UI {
         return tabPlayers;
     }
 
-    public static int interfaceRounds(){
+    public int interfaceRounds(){
         int rounds = 0;
         String str = "";
         int i = 1;
@@ -98,6 +103,42 @@ public class UI {
 
 
             System.out.println("How many rounds? (1 to 9)");
+            do {
+                str = keyboard.nextLine();
+                String [] tab_entry= str.split(" : ");
+                try {
+                    rounds = Integer.parseInt(str);
+                } catch(NumberFormatException e){
+                    end = false;
+                }
+
+                if (rounds<10 && rounds>0){
+                    end = true;
+                }
+
+                if (end == false) {
+                    String log = ("Error rounds number input " + rounds + "\n");
+                    fileWritter.fillInLog(log);
+                    System.out.println("Rounds number must be an integer between 1 and 9");
+                } else {
+                    System.out.println("You must win "+ rounds +" to win the game\n");
+                }
+            } while (!end);
+            i++;
+        }
+        return rounds;
+    }
+
+    /*public static int interfaceGridSize(){
+        int [] tabGridSize = new int[2];
+        String str = "";
+        int i = 1;
+        Scanner keyboard = new Scanner(System.in);
+        while (i < 2) {
+            boolean end = false;
+
+
+            System.out.println("Size of the grid? <linexcolumn>");
             do {
                 str = keyboard.nextLine();
 
@@ -122,7 +163,7 @@ public class UI {
             i++;
         }
         return rounds;
-    }
+    }*/
 
 
 

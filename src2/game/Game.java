@@ -2,28 +2,39 @@ package game;
 
 import java.util.Scanner;
 import userInterface.*;
-import rules.*;
 import java.io.File;
 
 public class Game{
+    //Attributes
+    private final Player [] tabPlayers;
+    private final int roundToWin;
+    private final Grid grid;
+    private final UInterface ui;
+    private final FileWritter fileWritter;
+    private final Displayer displayer;
 
     //Constructor
-    Game(){}
+    Game(){
+        displayer = new Displayer();
+        ui = new UI();
+        fileWritter = new FileWritter();
+        roundToWin = this.gameInitParameters();
+        tabPlayers = this.gameInit(); //Get the filled in tab players
+        grid = new Grid(7,6); //Create the grid
+    }
 
     //Main function :  run the game
     public static void main(String[] var0) {
         Game game = new Game(); //Create a new game
-        int roundToWin = game.gameInitParameters();
-        Player [] tab_players = game.gameInit(); //Get the filled in tab players
-        game.runGame(tab_players, game, roundToWin); //Run the main function
-        game.gameEnds(tab_players, game); //game ends
+        game.runGame(); //Run the main function
+        game.gameEnds(); //game ends
 
     }
 
     //Init parameters
     int gameInitParameters(){
 
-        int roundToWin = UI.interfaceRounds(); //Initialize number of rounds to win
+        int roundToWin = ui.interfaceRounds(); //Initialize number of rounds to win
         return roundToWin;
     }
 
@@ -31,63 +42,60 @@ public class Game{
     Player [] gameInit(){
         File log = new File("log.txt");
         log.delete();
-        Player [] tab_players = UI.interfacePlayer(); //Create two players
-        return tab_players;
+        Player [] tabPlayers = ui.interfacePlayer(); //Create two players
+        return tabPlayers;
     }
 
     //Run the main game
-    void runGame(Player [] tab_players, Game game, int roundToWin){
-        Grid grid = new Grid(6,7); //Create the grid
+    void runGame(){
 
         int round = 1;
 
-        while (tab_players[1].getWin() < roundToWin && tab_players[2].getWin() < roundToWin) {
-            game.writeLogText("Round begins\n");
+        while (tabPlayers[1].getWin() < roundToWin && tabPlayers[2].getWin() < roundToWin) {
+            writeLogText("Round begins\n");
 
-            System.out.println("Score : "+ tab_players[1].getWin() +" - "+ tab_players[2].getWin());
-            System.out.println("Round n° " + round);
-            grid.display();
+            displayer.displayStartInformation(tabPlayers, round);
+            displayer.gridDisplay(grid);
 
             int col = 0; int line = 0;
             int tour = 0; int offset = 0;
-            int real_turn = 1; int playerNb = 1;
+            int realTurn = 1; int playerNb = 1;
             if (round%2 == 0){ tour = 1; offset = 1; }
             else { tour = 0; offset = 0; }
 
             while (tour < ((grid.getNbline() * grid.getNbcol()) + offset)) {
                 if (tour%2 != 0){ playerNb = 2; }
                 else{ playerNb = 1; }
-                System.out.println(playerNb);
-                System.out.println(tab_players[playerNb].getPlayerValue());
-                System.out.println("turn n° " + real_turn);
 
-                col = tab_players[playerNb].play(grid, tour); //player[playerNb] plays
+                displayer.displayTurn(realTurn);
+
+                col = tabPlayers[playerNb].play(grid, tour, ui); //player[playerNb] plays
 
 
                 if (grid.colValidity(col, playerNb) == true) {
 
-                    game.writeLogText("Player " + tab_players[playerNb].getNb()+" plays " + (col+1) +"\n");
+                    writeLogText("Player " + tabPlayers[playerNb].getNb()+" plays " + (col+1) +"\n");
                     line = grid.updateGrid(col, tour); //get line number
 
                     if (line != -1) {
-                        grid.display();
+                        displayer.gridDisplay(grid);
                         if (grid.isWinning(col, line, tour) == true) {
-                            System.out.println(tab_players[playerNb].getName() + " won the round");
-                            tab_players[playerNb].setWin(1);
-
-                            game.writeLogText("Player "+ playerNb + " wins\n");
-                            game.writeLogText("Score "+ tab_players[1].getWin() +" - "+ tab_players[2].getWin() + "\n");
+                            displayer.displayRoundWon(tabPlayers, playerNb);
+                            tabPlayers[playerNb].setWin(1);
                             grid.initGrid();
+
+                            writeLogText("Player "+ playerNb + " wins\n");
+                            writeLogText("Score "+ tabPlayers[1].getWin() +" - "+ tabPlayers[2].getWin() + "\n");
                             break;
                         }
                         else if (grid.isWinning(col, line, tour) == false && tour == ((grid.getNbline() * grid.getNbcol()) + offset)-1){
-                            System.out.println("Round ended in a draw, there is no winner");
+                            displayer.displayEquality();
                             grid.initGrid();
-                            game.writeLogText("Equality\n");
+                            writeLogText("Equality\n");
                             break;
                         }
                         tour++;
-                        real_turn++;
+                        realTurn++;
                     }
                 }
             }
@@ -96,18 +104,13 @@ public class Game{
     }
 
     //game ends
-    void gameEnds(Player [] tab_players, Game game){
-        System.out.println("Final score is : "+tab_players[1].getWin() + " - " + tab_players[2].getWin());
-        if (tab_players[1].getWin() == 3) {
-            System.out.println("Player " + tab_players[1].getName() + " won the match");
-        } else {
-            System.out.println("Player " + tab_players[2].getName() + " won the match");
-        }
-        game.writeLogText("Game ends\n");
+    void gameEnds(){
+        displayer.displayEndGame(tabPlayers);
+        writeLogText("Game ends\n");
     }
 
     //Write in logs file
     void writeLogText(String logText){
-        FileWritter.fillInLog(logText);
+        fileWritter.fillInLog(logText);
     }
 }

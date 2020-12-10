@@ -1,6 +1,5 @@
 package game;
 
-import rules.*;
 import userInterface.FileWritter;
 
 public class Grid {
@@ -9,11 +8,15 @@ public class Grid {
     private final int nbcol;
     private final int nbline;
     private final int [][] grid;
+    private final FileWritter fileWritter;
+    private final Displayer displayer;
 
     //Constructor
     Grid(int c, int l){
         nbcol = c;
         nbline = l;
+        fileWritter = new FileWritter();
+        displayer = new Displayer();
         grid = new int [nbline][nbcol];
         for (int i = 0; i<nbline; i++){
             for (int j = 0; j<nbcol; j++){
@@ -22,11 +25,11 @@ public class Grid {
         }
     }
     //Get functions
-    int getNbcol() { return nbcol; }
-    int getNbline(){
+    public int getNbcol() { return nbcol; }
+    public int getNbline(){
         return nbline;
     }
-    int getCell(int i , int j){ return grid[i][j]; }
+    public int getCell(int i , int j){ return grid[i][j]; }
 
     //Col number validity
     boolean colValidity(int col, int playerNb){
@@ -34,16 +37,16 @@ public class Grid {
 
         col ++;
         if (col > nbcol || col<1){
-            System.out.println("Column number must be between 1 and " + nbcol);
+            displayer.displayInvalidCol(nbcol);
             logText = "Error column invalid " + col + "\n";
-            FileWritter.fillInLog(logText);
+            fileWritter.fillInLog(logText);
             return false;
         }
         col--;
         if (grid[0][col] != 0) {
-            System.out.println("Column number " + col + " is full");
+            displayer.displayFullCol(col);
             logText = "Error column full " + (col+1) + "\n";
-            FileWritter.fillInLog(logText);
+            fileWritter.fillInLog(logText);
             return false;
         }
         return true;
@@ -118,7 +121,7 @@ public class Grid {
     }
 
     //Copy the grid
-    int [][] copyGrid(){
+    public int [][] copyGrid(){
         int [][] gridOut = new int [nbline][nbcol];
         for (int i = 0; i<nbline; i++){
             for (int j = 0; j<nbcol; j++){
@@ -128,27 +131,4 @@ public class Grid {
         return gridOut;
     }
 
-    //Display grid
-    void display(){
-        System.out.println();
-        for (int j = 1; j<=nbcol; j++){
-                System.out.print(" " + j + " ");
-        }
-        System.out.println();
-        for (int i = 0; i<nbline; i++){
-            for (int j = 0; j<nbcol; j++){
-                if (grid[i][j] == 0) {
-                    System.out.print(" " + "." + " ");
-                }
-                if (grid[i][j] == 1) {
-                    System.out.print(" " + "x" + " ");
-                }
-                if (grid[i][j] == 2) {
-                    System.out.print(" " + "o" + " ");
-                }
-            }
-            System.out.println();
-        }
-
-    }
 }

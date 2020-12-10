@@ -8,7 +8,8 @@ import java.io.FileWriter;
 
 public class FileWritter {
 
-    public static void fillInLog(String text ){
+    public FileWritter(){}
+    public void fillInLog(String text ){
         try {
             File logFile = new File("log.txt");
             BufferedWriter logWriter = new BufferedWriter(new FileWriter("log.txt",true));
