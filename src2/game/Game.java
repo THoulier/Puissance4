@@ -13,6 +13,7 @@ public class Game{
     private final UInterface ui;
     private final FileWritter fileWritter;
     private final Displayer displayer;
+    private int exit;
 
     //Constructor
     Game(){
@@ -23,29 +24,28 @@ public class Game{
         roundToWin = ui.interfaceRounds();
         tabPlayers = ui.interfacePlayer(); //Get the filled in tab players
         grid = new Grid(tabGridSize[1],tabGridSize[0]); //Create the grid
+        exit = 0;
     }
 
     //Main function :  run the game
     public static void main(String[] var0) {
+        File log = new File("log.txt");
+        log.delete();
         Game game = new Game(); //Create a new game
-        game.gameInit(); //init game
         game.runGame(); //Run the main function
         game.gameEnds(); //game ends
     }
 
 
-    //Init game
-    void gameInit(){
-        File log = new File("log.txt");
-        log.delete();
-    }
+
+
 
     //Run the main game
     void runGame(){
 
         int round = 1;
 
-        while (tabPlayers[1].getWin() < roundToWin && tabPlayers[2].getWin() < roundToWin) {
+        while (tabPlayers[1].getWin() < roundToWin && tabPlayers[2].getWin() < roundToWin && exit != 1) {
             writeLogText("Round begins\n");
 
             displayer.displayStartInformation(tabPlayers, round);
@@ -65,6 +65,10 @@ public class Game{
 
                 col = tabPlayers[playerNb].play(grid, tour, ui); //player[playerNb] plays
 
+                if (tabPlayers[1].getExit() == 1 || tabPlayers[2].getExit() == 1){
+                    exit = 1;
+                    break;
+                }
 
                 if (grid.colValidity(col, playerNb) == true) {
 
@@ -99,8 +103,12 @@ public class Game{
 
     //game ends
     void gameEnds(){
-        displayer.displayEndGame(tabPlayers);
-        writeLogText("Game ends\n");
+        if (exit == 1){
+            writeLogText("Player quit\n");
+        } else {
+            displayer.displayEndGame(tabPlayers);
+            writeLogText("Game ends\n");
+        }
     }
 
     //Write in logs file

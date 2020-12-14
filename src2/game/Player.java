@@ -16,6 +16,7 @@ abstract public class Player {
     }
 
     abstract int play (Grid grid, int tour, UInterface ui);
+    abstract int getExit ();
 
     String getName() {
         return name;

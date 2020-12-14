@@ -19,14 +19,11 @@ public class Ia extends Player{
 
     int play (Grid grid, int tour, UInterface ui){
         int col = 0;
-        if (iaType == 1) {
-            col = algo.iaPlay(tour, grid);
-        }
-        else if (iaType == 2){
-            col = algo.iaPlay(tour, grid);
-        }
+        col = algo.iaPlay(tour, grid);
         return col;
     }
 
-
+    int getExit(){
+        return 0;
+    }
 }

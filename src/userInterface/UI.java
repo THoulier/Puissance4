@@ -22,7 +22,7 @@ public class UI {
             try {
                 col = Integer.parseInt(str);
             } catch (NumberFormatException e) {
-                String log = ("Error cell input " + str + "\n");
+                String log = ("Error column input " + str + "\n");
                 FileWritter.fillInLog(log);
                 System.out.println("Colomn must be an integer");
             }

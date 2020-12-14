@@ -10,7 +10,7 @@ public class UI implements UInterface{
     public UI(){
         fileWritter = new FileWritter();
     }
-
+    /*
     public int getUserEntry(){
         Scanner keyboard = new Scanner(System.in);
         String str = "";
@@ -27,6 +27,33 @@ public class UI implements UInterface{
             System.out.println("Colomn must be an integer");
         }
 
+        return col-1;
+    }*/
+    public String getUserEntry(){
+        Scanner keyboard = new Scanner(System.in);
+        String str = "";
+        str =  keyboard.nextLine();
+        return str;
+    }
+
+    public boolean userExit(String str){
+        boolean exit = false;
+        if (str.equals("exit")==true){
+            exit = true;
+        }
+        return exit;
+    }
+
+    public int userEntry2Col(String str){
+        int col  = 0;
+        try {
+            col = Integer.parseInt(str);
+        }
+        catch(NumberFormatException e){
+            String log = ("Error cell input " + str + "\n");
+            fileWritter.fillInLog(log);
+            System.out.println("Colomn must be an integer");
+        }
         return col-1;
     }
 
@@ -121,6 +148,8 @@ public class UI implements UInterface{
                     System.out.println("Rounds number must be an integer between 1 and 9");
                 } else {
                     System.out.println("You must win "+ rounds +" to win the game\n");
+                    String log = ("Rounds to win " + rounds + "\n");
+                    fileWritter.fillInLog(log);
                 }
             } while (!end);
             i++;
@@ -164,6 +193,8 @@ public class UI implements UInterface{
                 } else {
                     tabGridSize[0] = line;
                     tabGridSize[1] = col;
+                    String log = ("Grid size " + line + "x" + col + "\n");
+                    fileWritter.fillInLog(log);
                 }
             } while (!end);
             i++;

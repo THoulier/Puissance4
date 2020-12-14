@@ -1,22 +1,5 @@
-Player 1 is ia monkey
-Player 2 is human albert
+Player 1 is human a
+Player 2 is human b
 Round begins
-Player 1 plays 1
-Player 2 plays 2
-Player 1 plays 1
-Player 2 plays 1
-Player 1 plays 2
-Player 2 plays 2
-Player 1 plays 3
-Player 2 plays 3
-Player 1 plays 3
-Player 2 plays 4
-Player 1 plays 2
-Player 2 plays 1
-Player 2 wins
-Score 0 - 1
-Round begins
-Player 2 plays 2
-Player 1 plays 1
 A player has left the game
 Game ends

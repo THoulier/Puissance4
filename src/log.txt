@@ -1,6 +1,10 @@
-Player 1 is ia a
-Player 2 is human b
+Player 1 is human albert
+Player 2 is ia ran
 Round begins
-Player 1 plays 6
-A player has left the game
-Game ends
+Error column invalid -67
+Error cell input aaa
+Error column invalid 0
+Error cell input haha
+Error column invalid 0
+Error cell input éé&
+Error column invalid 0

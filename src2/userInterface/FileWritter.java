@@ -9,9 +9,9 @@ import java.io.FileWriter;
 public class FileWritter {
 
     public FileWritter(){}
+
     public void fillInLog(String text ){
         try {
-            File logFile = new File("log.txt");
             BufferedWriter logWriter = new BufferedWriter(new FileWriter("log.txt",true));
             logWriter.write(text);
             logWriter.close();
