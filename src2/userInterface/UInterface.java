@@ -4,9 +4,8 @@ import game.Player;
 
 public interface UInterface {
     int interfaceRounds();
-    String getUserEntry();
-    boolean userExit(String str);
-    int userEntry2Col(String str);
+    int getUserEntry();
+    boolean getExit();
     Player[] interfacePlayer();
     int [] interfaceGridSize();
 }

@@ -6,53 +6,46 @@ import java.util.Scanner;
 
 public class UI implements UInterface{
     private final FileWritter fileWritter;
+    private boolean playerExit;
     //Constructor
     public UI(){
         fileWritter = new FileWritter();
+        playerExit = false;
     }
-    /*
+
+    public boolean getExit(){
+        return playerExit;
+    }
     public int getUserEntry(){
-        Scanner keyboard = new Scanner(System.in);
-        String str = "";
         int col = 0;
-
-        str =  keyboard.nextLine();
-
-        try {
-            col = Integer.parseInt(str);
-        }
-        catch(NumberFormatException e){
-            String log = ("Error cell input " + str + "\n");
-            fileWritter.fillInLog(log);
-            System.out.println("Colomn must be an integer");
-        }
-
-        return col-1;
-    }*/
-    public String getUserEntry(){
-        Scanner keyboard = new Scanner(System.in);
         String str = "";
-        str =  keyboard.nextLine();
-        return str;
-    }
+        boolean entryIsInvalid = true;
+        Scanner keyboard = new Scanner(System.in);
+        while (entryIsInvalid) {
+            boolean end = false;
 
-    public boolean userExit(String str){
-        boolean exit = false;
-        if (str.equals("exit")==true){
-            exit = true;
-        }
-        return exit;
-    }
+            do {
+                str = keyboard.nextLine();
+                if (str.equals("exit")){
+                    playerExit = true;
+                    end = true;
+                } else {
+                    try {
+                        col = Integer.parseInt(str);
+                        end = true;
+                    } catch (NumberFormatException e) {
+                        end = false;
+                    }
+                }
 
-    public int userEntry2Col(String str){
-        int col  = 0;
-        try {
-            col = Integer.parseInt(str);
-        }
-        catch(NumberFormatException e){
-            String log = ("Error cell input " + str + "\n");
-            fileWritter.fillInLog(log);
-            System.out.println("Colomn must be an integer");
+                if (end == false) {
+                    String log = ("Error column input " + str + "\n");
+                    fileWritter.fillInLog(log);
+                    System.out.println("Colomn must be an integer");
+                }
+
+            } while (!end);
+            entryIsInvalid = false;
         }
         return col-1;
     }
@@ -75,10 +68,10 @@ public class UI implements UInterface{
                 {
                     end = true;
                     String [] tabEntry= entry.split(" ");
+
                     if (tabEntry.length == 1) {
                         end = false;
-                    }
-                    else {
+                    } else {
                         playerName = tabEntry[1];
                         playerType = tabEntry[0];
                     }
@@ -143,7 +136,7 @@ public class UI implements UInterface{
                 }
 
                 if (end == false) {
-                    String log = ("Error rounds number input " + rounds + "\n");
+                    String log = ("Error rounds number input " + str + "\n");
                     fileWritter.fillInLog(log);
                     System.out.println("Rounds number must be an integer between 1 and 9");
                 } else {
@@ -169,25 +162,26 @@ public class UI implements UInterface{
             System.out.println("Size of the grid? <linexcolumn>");
             do {
                 str = keyboard.nextLine();
-                String [] tabEntry = str.split("x");
-
-                if (tabEntry.length != 2) {
-                    end = false;
-                } else {
-                    try {
-                        col = Integer.parseInt(tabEntry[1]);
-                        line = Integer.parseInt(tabEntry[0]);
-                    } catch (NumberFormatException e) {
+                System.out.println(str);
+                if (str.matches("^[[1-9]x[1-9]]*$")) {
+                    String [] tabEntry = str.split("x");
+                    if (tabEntry.length != 2) {
                         end = false;
-                    }
+                    } else {
+                        try {
+                            col = Integer.parseInt(tabEntry[1]);
+                            line = Integer.parseInt(tabEntry[0]);
+                        } catch (NumberFormatException e) {
+                            end = false;
+                        }
 
-                    if ((line * col) % 2 == 0 && col > 3 && (line * col) > 7) {
-                        end = true;
+                        if ((line * col) % 2 == 0 && col > 3 && (line * col) > 7) {
+                            end = true;
+                        }
                     }
                 }
-
                 if (end == false) {
-                    String log = ("Error grid size input " + line +" x " + col + "\n");
+                    String log = ("Error grid size input\n");
                     fileWritter.fillInLog(log);
                     System.out.println("Incorrect grid size, reminder : line x column must be even and greater than 7, column must be greater than 3\n");
                 } else {

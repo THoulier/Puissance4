@@ -1,18 +1,5 @@
-Error grid size input 0 x 0
-Error grid size input 0 x 0
-Grid size 6x6
-Error rounds number input 0
-Error rounds number input 0
-Rounds to win 8
-Error bad input player 1
-Player 1 is ia alberto
-Player 2 is human garry hehe
-Round begins
-Player 1 plays 6
-Player 2 plays 4
-Player 1 plays 2
-Player 2 plays 4
-Player 1 plays 6
-Player 2 plays 4
-Player 1 plays 2
-Player quit
+Error grid size input
+Error grid size input
+Error grid size input
+Error grid size input
+Error grid size input

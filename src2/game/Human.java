@@ -12,12 +12,11 @@ public class Human extends Player{
     }
 
     int play (Grid grid, int tour, UInterface ui){
-        int col = 0;
-        String str = ui.getUserEntry();
-        if (ui.userExit(str) == true){
+
+        int col = ui.getUserEntry();
+
+        if (ui.getExit() == true){
             exit = 1;
-        } else {
-            col = ui.userEntry2Col(str);
         }
         return col;
     }

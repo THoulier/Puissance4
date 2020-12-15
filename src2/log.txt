@@ -1,21 +1,10 @@
-Grid size 6x7
-Rounds to win 9
-Player 1 is ia monkey
-Player 2 is human moi
+Grid size 7x6
+Rounds to win 8
+Player 1 is ia a
+Error bad input player 2
+Player 2 is human b
 Round begins
-Player 1 plays 1
-Player 2 plays 1
-Player 1 plays 2
-Player 2 plays 3
-Player 1 plays 2
-Player 2 plays 3
-Player 1 plays 2
-Player 2 plays 2
 Player 1 plays 3
-Error cell input aa
-Error column invalid 0
-Error column invalid -1
-Error column invalid 90
-Error cell input xzy
-Error column invalid 0
+Error column input aaa
+Error column invalid 87
 Player quit
