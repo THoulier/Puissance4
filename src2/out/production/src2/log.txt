@@ -1,5 +1,10 @@
-Error grid size input
-Error grid size input
-Error grid size input
-Error grid size input
-Error grid size input
+Grid size 7x6
+Rounds to win 8
+Player 1 is ia a
+Error bad input player 2
+Player 2 is human b
+Round begins
+Player 1 plays 3
+Error column input aaa
+Error column invalid 87
+Player quit

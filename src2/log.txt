@@ -1,10 +1,147 @@
-Grid size 7x6
+Error grid size input
+Error grid size input
+Error grid size input
+Error grid size input
+Error grid size input
+Grid size 6x7
+Error rounds number input 
 Rounds to win 8
-Player 1 is ia a
-Error bad input player 2
-Player 2 is human b
+Error bad input player 1
+Player 1 is ia random
+Player 2 is human boby
 Round begins
+Player 1 plays 2
+Player 2 plays 3
+Player 1 plays 4
+Player 2 plays 3
 Player 1 plays 3
-Error column input aaa
-Error column invalid 87
-Player quit
+Player 2 plays 2
+Player 1 plays 5
+Player 2 plays 1
+Player 1 plays 7
+Player 2 plays 1
+Player 1 plays 6
+Player 1 wins
+Score 1 - 0
+Round begins
+Player 2 plays 1
+Player 1 plays 6
+Player 2 plays 1
+Player 1 plays 5
+Player 2 plays 1
+Player 1 plays 2
+Player 2 plays 1
+Player 2 wins
+Score 1 - 1
+Round begins
+Player 1 plays 7
+Player 2 plays 1
+Player 1 plays 3
+Player 2 plays 1
+Player 1 plays 6
+Player 2 plays 1
+Player 1 plays 2
+Player 2 plays 1
+Player 2 wins
+Score 1 - 2
+Round begins
+Player 2 plays 2
+Player 1 plays 5
+Player 2 plays 3
+Player 1 plays 5
+Player 2 plays 1
+Player 1 plays 4
+Player 2 plays 4
+Player 1 plays 3
+Player 2 plays 5
+Player 1 plays 5
+Player 2 plays 6
+Player 1 plays 7
+Player 2 plays 7
+Player 1 plays 6
+Error column invalid 8
+Player 2 plays 7
+Player 1 plays 7
+Player 2 plays 6
+Player 1 plays 5
+Player 2 plays 4
+Player 2 wins
+Score 1 - 3
+Round begins
+Player 1 plays 5
+Player 2 plays 2
+Player 1 plays 7
+Error column input 
+Error column input pp
+Error column invalid -67
+Player 2 plays 2
+Player 1 plays 2
+Player 2 plays 2
+Player 1 plays 4
+Player 2 plays 2
+Player 1 plays 4
+Player 2 plays 2
+Error column full 2
+Player 1 plays 7
+Error column full 2
+Error column full 2
+Player 2 plays 1
+Player 1 plays 7
+Player 2 plays 1
+Error column full 2
+Player 1 plays 7
+Player 1 wins
+Score 2 - 3
+Round begins
+Player 2 plays 1
+Player 1 plays 2
+Player 2 plays 1
+Player 1 plays 6
+Player 2 plays 1
+Player 1 plays 5
+Player 2 plays 1
+Player 2 wins
+Score 2 - 4
+Round begins
+Player 1 plays 6
+Player 2 plays 1
+Player 1 plays 2
+Player 2 plays 1
+Player 1 plays 5
+Player 2 plays 1
+Player 1 plays 7
+Player 2 plays 1
+Player 2 wins
+Score 2 - 5
+Round begins
+Player 2 plays 1
+Player 1 plays 5
+Player 2 plays 1
+Player 1 plays 5
+Player 2 plays 1
+Player 1 plays 3
+Player 2 plays 1
+Player 2 wins
+Score 2 - 6
+Round begins
+Player 1 plays 7
+Player 2 plays 1
+Player 1 plays 3
+Player 2 plays 1
+Player 1 plays 4
+Player 2 plays 1
+Player 1 plays 3
+Player 2 plays 1
+Player 2 wins
+Score 2 - 7
+Round begins
+Player 2 plays 1
+Player 1 plays 6
+Player 2 plays 1
+Player 1 plays 6
+Player 2 plays 1
+Player 1 plays 7
+Player 2 plays 1
+Player 2 wins
+Score 2 - 8
+Game ends
