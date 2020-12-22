@@ -1,0 +1,36 @@
+test game_check_diagonal_1_victory.sc result is ok.
+test game_check_diagonal_1_victory.sc log is ok.
+
+test game_check_diagonal_2_victory.sc result is ok.
+test game_check_diagonal_2_victory.sc log is ok.
+
+test game_check_horizontal_victory.sc result is ok.
+test game_check_horizontal_victory.sc log is ok.
+
+test game_check_vertical_victory.sc result is ok.
+test game_check_vertical_victory.sc log is ok.
+
+test game_complete_fight.sc result is ok.
+test game_complete_fight.sc log is ok.
+
+test game_error_invalid_column_format.sc result is ok.
+test game_error_invalid_column_format.sc log is ok.
+
+test game_error_invalid_column_full.sc result is ok.
+test game_error_invalid_column_full.sc log is ok.
+
+test game_error_invalid_column_number.sc result is ok.
+test game_error_invalid_column_number.sc log is ok.
+
+test game_error_player_1.sc result is ok.
+test game_error_player_1.sc log is ok.
+
+test game_error_player_2.sc result is ok.
+test game_error_player_2.sc log is ok.
+
+test game_exit.sc result is ok.
+test game_exit.sc log is ok.
+
+test game_tie.sc result is ok.
+test game_tie.sc log is ok.
+

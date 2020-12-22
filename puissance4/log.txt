@@ -1,0 +1,5 @@
+Joueur 1 est humain alberto
+Joueur 2 est ia a
+Manche commence
+Joueur 1 joue 5
+Joueur 2 joue 2

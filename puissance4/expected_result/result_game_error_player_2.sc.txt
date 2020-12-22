@@ -1,0 +1,4 @@
+Joueur 1?
+Joueur 2?
+Erreur saisie Joueur 2
+Joueur 2?

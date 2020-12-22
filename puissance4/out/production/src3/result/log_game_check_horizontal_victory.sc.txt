@@ -1,0 +1,7 @@
+Joueur 1 est humain albert
+Joueur 2 est ia random
+Manche commence
+Joueur 1 joue 2
+Joueur 2 joue 5
+Joueur 1 joue 1
+Joueur 2 joue 2

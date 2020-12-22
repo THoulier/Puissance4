@@ -1,0 +1,17 @@
+Joueur 1 est humain moi
+Joueur 2 est humain lui
+Manche commence
+Joueur 1 joue 1
+Joueur 2 joue 2
+Joueur 1 joue 2
+Joueur 2 joue 3
+Joueur 1 joue 4
+Joueur 2 joue 3
+Joueur 1 joue 3
+Joueur 2 joue 4
+Joueur 1 joue 5
+Joueur 2 joue 4
+Joueur 1 joue 4
+Joueur 1 gagne
+Score 1 - 0
+Manche commence

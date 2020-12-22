@@ -1,0 +1,48 @@
+Joueur 1 est humain moi
+Joueur 2 est humain lui
+Manche commence
+Joueur 1 joue 1
+Joueur 2 joue 1
+Joueur 1 joue 1
+Joueur 2 joue 1
+Joueur 1 joue 1
+Joueur 2 joue 1
+Joueur 1 joue 4
+Joueur 2 joue 2
+Joueur 1 joue 5
+Joueur 2 joue 3
+Joueur 1 joue 3
+Joueur 2 joue 2
+Joueur 1 joue 2
+Joueur 2 joue 2
+Joueur 1 joue 2
+Joueur 2 joue 2
+Joueur 1 joue 7
+Joueur 2 joue 4
+Joueur 1 joue 7
+Joueur 2 joue 5
+Joueur 1 joue 4
+Joueur 2 joue 6
+Joueur 1 joue 4
+Joueur 2 joue 6
+Joueur 1 joue 7
+Joueur 2 joue 3
+Joueur 1 joue 5
+Joueur 2 joue 3
+Joueur 1 joue 5
+Joueur 2 joue 3
+Joueur 1 joue 3
+Joueur 2 joue 7
+Joueur 1 joue 7
+Joueur 2 joue 6
+Joueur 1 joue 4
+Joueur 2 joue 4
+Joueur 1 joue 6
+Joueur 2 joue 6
+Joueur 1 joue 6
+Joueur 2 joue 5
+Joueur 1 joue 5
+Joueur 2 joue 7
+Egalite
+Score 0 - 0
+Manche commence
